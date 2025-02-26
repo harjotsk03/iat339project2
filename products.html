@@ -26,17 +26,67 @@
       </nav>
 
     <main class="products-container">
-        <div class="category-filters">
-            <button class="filter-btn active" data-category="all">All Products</button>
-            <button class="filter-btn" data-category="seating">Seating</button>
-            <button class="filter-btn" data-category="tables">Tables</button>
-            <button class="filter-btn" data-category="shelving">Shelving</button>
-            <button class="filter-btn" data-category="misc">Misc</button>
+        <!-- Hero Section -->
+        <section class="products-hero">
+            <h1>Our Collection</h1>
+            <p>Discover our carefully curated selection of modern furniture pieces.</p>
+        </section>
+
+        <!-- Results and Controls -->
+        <div class="product-controls">
+            <div class="results-count">
+                <p>Results (<span id="product-count">0</span>)</p>
+            </div>
+            <div class="controls-group">
+                <div class="filter-dropdown">
+                    <button class="filter-btn" aria-expanded="false" aria-haspopup="true">
+                        Filter <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="filter-menu" role="menu">
+                        <label class="filter-option" tabindex="0" role="menuitemcheckbox" aria-checked="true">
+                            <input type="checkbox" value="all" checked> All Products
+                        </label>
+                        <label class="filter-option" tabindex="0" role="menuitemcheckbox" aria-checked="false">
+                            <input type="checkbox" value="seating"> Seating
+                        </label>
+                        <label class="filter-option" tabindex="0" role="menuitemcheckbox" aria-checked="false">
+                            <input type="checkbox" value="tables"> Tables
+                        </label>
+                        <label class="filter-option" tabindex="0" role="menuitemcheckbox" aria-checked="false">
+                            <input type="checkbox" value="shelving"> Shelving
+                        </label>
+                        <label class="filter-option" tabindex="0" role="menuitemcheckbox" aria-checked="false">
+                            <input type="checkbox" value="misc"> Misc
+                        </label>
+                    </div>
+                </div>
+                <div class="sort-options">
+                    <select id="sort" name="sort">
+                        <option value="featured">Sort: Featured</option>
+                        <option value="price-low">Sort: Price Low to High</option>
+                        <option value="price-high">Sort: Price High to Low</option>
+                        <option value="name">Sort: Name A-Z</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="active-filters">
+            <!-- Active filters will be dynamically inserted here -->
         </div>
 
         <div class="products-grid">
             <!-- Products will be dynamically inserted here -->
         </div>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter for new products and exclusive offers.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
     </main>
 
     <script src="products.js"></script>

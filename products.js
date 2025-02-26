@@ -166,27 +166,157 @@ function renderProducts() {
 document.addEventListener('DOMContentLoaded', () => {
     // Render all products
     renderProducts();
+    updateProductCount();
 
     // Filter functionality
-    const filterButtons = document.querySelectorAll('.filter-btn');
+    const filterOptions = document.querySelectorAll('.filter-option input');
     const productCards = document.querySelectorAll('.product-card');
 
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const category = button.getAttribute('data-category');
+    filterOptions.forEach(option => {
+        option.addEventListener('change', () => {
+            // If "All Products" is checked, uncheck others
+            if (option.value === 'all' && option.checked) {
+                filterOptions.forEach(opt => {
+                    if (opt.value !== 'all') opt.checked = false;
+                });
+            }
+            // If another option is checked, uncheck "All Products"
+            else if (option.value !== 'all' && option.checked) {
+                const allOption = document.querySelector('.filter-option input[value="all"]');
+                allOption.checked = false;
+            }
 
-            // Update active button
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
+            // Get all selected categories
+            const selectedCategories = Array.from(filterOptions)
+                .filter(opt => opt.checked)
+                .map(opt => opt.value);
+
+            // If nothing is selected or "all" is selected, show all products
+            const showAll = selectedCategories.length === 0 || selectedCategories.includes('all');
 
             // Filter products
             productCards.forEach(product => {
-                if (category === 'all' || product.getAttribute('data-category') === category) {
+                const category = product.getAttribute('data-category');
+                if (showAll || selectedCategories.includes(category)) {
                     product.style.display = 'block';
                 } else {
                     product.style.display = 'none';
                 }
             });
+
+            updateProductCount();
+            updateActiveFilters();
         });
     });
-}); 
+
+    // Sort functionality
+    const sortSelect = document.getElementById('sort');
+    sortSelect.addEventListener('change', () => {
+        const sortValue = sortSelect.value;
+        const productsArray = Array.from(document.querySelectorAll('.product-card'));
+        
+        productsArray.sort((a, b) => {
+            const aPrice = parseFloat(a.querySelector('h4').textContent.replace(/[^0-9.]/g, ''));
+            const bPrice = parseFloat(b.querySelector('h4').textContent.replace(/[^0-9.]/g, ''));
+            const aName = a.querySelector('h3').textContent;
+            const bName = b.querySelector('h3').textContent;
+            
+            switch(sortValue) {
+                case 'price-low':
+                    return aPrice - bPrice;
+                case 'price-high':
+                    return bPrice - aPrice;
+                case 'name':
+                    return aName.localeCompare(bName);
+                default: // featured
+                    return 0;
+            }
+        });
+        
+        const productsGrid = document.querySelector('.products-grid');
+        productsArray.forEach(card => productsGrid.appendChild(card));
+    });
+
+    // Dropdown functionality
+    const filterBtn = document.querySelector('.filter-btn');
+    const filterMenu = document.querySelector('.filter-menu');
+
+    // Toggle dropdown on button click
+    filterBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleDropdown();
+    });
+
+    // Toggle dropdown on button keydown
+    filterBtn.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleDropdown();
+        }
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!filterBtn.contains(e.target) && !filterMenu.contains(e.target)) {
+            closeDropdown();
+        }
+    });
+
+    function toggleDropdown() {
+        const isExpanded = filterBtn.getAttribute('aria-expanded') === 'true';
+        filterBtn.setAttribute('aria-expanded', !isExpanded);
+        filterMenu.style.display = isExpanded ? 'none' : 'block';
+    }
+
+    function closeDropdown() {
+        filterBtn.setAttribute('aria-expanded', 'false');
+        filterMenu.style.display = 'none';
+    }
+});
+
+// Function to update the product count
+function updateProductCount() {
+    const visibleProducts = document.querySelectorAll('.product-card[style*="display: block"], .product-card:not([style])').length;
+    document.getElementById('product-count').textContent = visibleProducts;
+}
+
+function updateActiveFilters() {
+    const activeFiltersContainer = document.querySelector('.active-filters');
+    const selectedFilters = Array.from(document.querySelectorAll('.filter-option input:checked'))
+        .filter(input => input.value !== 'all')
+        .map(input => input.value);
+
+    let filtersHTML = '';
+    
+    if (selectedFilters.length > 0) {
+        selectedFilters.forEach(filter => {
+            filtersHTML += `
+                <div class="filter-tag">
+                    ${filter.charAt(0).toUpperCase() + filter.slice(1)}
+                    <button onclick="removeFilter('${filter}')" aria-label="Remove ${filter} filter">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            `;
+        });
+        filtersHTML += `
+            <button class="clear-all-filters" onclick="clearAllFilters()">
+                Clear all
+            </button>
+        `;
+    }
+    
+    activeFiltersContainer.innerHTML = filtersHTML;
+}
+
+function removeFilter(filterValue) {
+    const filterInput = document.querySelector(`.filter-option input[value="${filterValue}"]`);
+    filterInput.checked = false;
+    filterInput.dispatchEvent(new Event('change'));
+}
+
+function clearAllFilters() {
+    const allOption = document.querySelector('.filter-option input[value="all"]');
+    allOption.checked = true;
+    allOption.dispatchEvent(new Event('change'));
+}
