@@ -60,3 +60,27 @@ function updateCartCount() {
 document.addEventListener('DOMContentLoaded', () => {
     updateCartCount();
 });
+
+function addToCartFromProduct() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const quantity = parseInt(document.getElementById('quantity').value);
+    
+    // Get product details from the page
+    const product = {
+        id: 1, // You might want to make this dynamic based on the product
+        name: document.querySelector('.product-info h1').textContent,
+        price: document.querySelector('.current-price').textContent,
+        image: document.querySelector('.main-image-container img').src,
+        quantity: quantity
+    };
+    
+    const existingItem = cart.find(item => item.id === product.id);
+    if (existingItem) {
+        existingItem.quantity += quantity;
+    } else {
+        cart.push(product);
+    }
+    
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount();
+}

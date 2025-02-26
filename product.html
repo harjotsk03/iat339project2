@@ -1,145 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="nav.css">
-    <link rel="stylesheet" href="product.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <nav class="topnav" id="myTopnav">
-      <a href="./index.html" class="logo">ModernFurniture</a>
-      
-      <div class="nav-links">
-        <a href="./index.html">Home</a>
-        <a href="./products.html">Products</a>
-        <a href="#about">About</a>
-        <a href="./cart.html">Cart (<span id="cart-count">0</span>)</a>
-      </div>
-    
-      <button class="icon" onclick="myFunction()">
-        <i class="fas fa-bars"></i>
-      </button>
-    </nav>
 
-    <main class="product-container">
-      <div class="productPageHeroSection">
-        <div class="productPageHeroSectionLeft">
-          <div class="main-image-container">
-            <img id="mainImage" src="./assets/ULbottleOpener1.png" alt="Main product view">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="product.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <nav class="topnav" id="myTopnav">
+    <a href="./index.html" class="logo">ModernFurniture</a>
+
+    <div class="nav-links">
+      <a href="./index.html">Home</a>
+      <a href="./products.html">Products</a>
+      <a href="#about">About</a>
+      <a href="./cart.html">Cart (<span id="cart-count">0</span>)</a>
+    </div>
+
+    <button class="icon" onclick="myFunction()">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+
+  <main class="product-container">
+    <div class="productPageHeroSection">
+      <div class="productPageHeroSectionLeft">
+        <div class="main-image-container">
+          <img id="mainImage" src="./assets/ULbottleOpener1.png" alt="Main product view">
+        </div>
+        <div class="thumbnail-gallery">
+          <button class="thumbnail active" onclick="changeImage('./assets/ULbottleOpener1.png')">
+            <img src="./assets/ULbottleOpener1.png" alt="Product view 1">
+          </button>
+          <button class="thumbnail" onclick="changeImage('./assets/ULbottleOpener2.png')">
+            <img src="./assets/ULbottleOpener2.png" alt="Product view 2">
+          </button>
+          <button class="thumbnail" onclick="changeImage('./assets/ULbottleOpener3.png')">
+            <img src="./assets/ULbottleOpener3.png" alt="Product view 3">
+          </button>
+          <button class="thumbnail" onclick="changeImage('./assets/ULbottleOpener4.png')">
+            <img src="./assets/ULbottleOpener4.png" alt="Product view 4">
+          </button>
+        </div>
+      </div>
+
+      <div class="productPageHeroSectionRight">
+        <div class="product-info">
+          <h1>Bottle Opener</h1>
+          <div class="product-rating">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>(4.5/5 - 3 Reviews)</span>
           </div>
-          <div class="thumbnail-gallery">
-            <button class="thumbnail active" onclick="changeImage('./assets/ULbottleOpener1.png')">
-              <img src="./assets/ULbottleOpener1.png" alt="Product view 1">
+
+          <div class="product-price">
+            <span class="current-price">$25.00</span>
+            <span class="original-price">$35.00</span>
+            <span class="discount-badge">$10 OFF</span>
+          </div>
+
+          <div class="product-description">
+            <p>Opening liquid-filled vessels with the sole intention of indulging in their contents. Channeling your
+              inner handyman to gently tap into small tasks, unlocking the power of precision with every strike.
+
+            </p>
+          </div>
+
+
+          <div class="add-to-cart">
+            <div class="quantity-selector">
+              <button class="qty-btn" onclick="decrementQty()">-</button>
+              <input type="number" id="quantity" value="1" min="1" max="10" readonly>
+              <button class="qty-btn" onclick="incrementQty()">+</button>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCartFromProduct()">
+              <i class="fas fa-shopping-cart"></i>
+              Add to Cart
             </button>
-            <button class="thumbnail" onclick="changeImage('./assets/ULbottleOpener2.png')">
-              <img src="./assets/ULbottleOpener2.png" alt="Product view 2">
-            </button>
-            <button class="thumbnail" onclick="changeImage('./assets/ULbottleOpener3.png')">
-              <img src="./assets/ULbottleOpener3.png" alt="Product view 3">
-            </button>
-            <button class="thumbnail" onclick="changeImage('./assets/ULbottleOpener4.png')">
-              <img src="./assets/ULbottleOpener4.png" alt="Product view 4">
-            </button>
+          </div>
+
+          <div class="product-features">
+            <div class="feature">
+              <i class="fas fa-truck"></i>
+              <span>Free Shipping</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-undo"></i>
+              <span>30-Day Returns</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-shield-alt"></i>
+              <span>2-Year Warranty</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="product-details">
+      <div class="product-details-grid">
+        <div class="product-details-left">
+          <div class="details-section" id="description">
+            <h2>Product Description</h2>
+            <p>Opening liquid-filled vessels with the sole intention of indulging in their contents. Channeling your inner handyman to gently tap into small tasks, unlocking the power of precision with every strike.</p>
+          </div>
+
+          <div class="details-section" id="specifications">
+            <h2>Technical Specifications</h2>
+            <ul class="specs-list">
+              <li><strong>Material:</strong> 5mm Aluminum / Rubber Washers / SS Hardware</li>
+              <li><strong>Weight:</strong> 0.32 lbs</li>
+              <li><strong>Dimensions:</strong> 35 cm / 30 cm / 125 cm</li>
+              <li><strong>Finish:</strong> Raw Tumbled</li>
+            </ul>
           </div>
         </div>
 
-        <div class="productPageHeroSectionRight">
-          <div class="product-info">
-            <h1>Ultra-Lite Bottle Opener</h1>
-            <div class="product-rating">
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-              </div>
-              <span>(4.5/5 - 128 Reviews)</span>
-            </div>
-            
-            <div class="product-price">
-              <span class="current-price">$29.99</span>
-              <span class="original-price">$39.99</span>
-              <span class="discount-badge">25% OFF</span>
-            </div>
-
-            <div class="product-description">
-              <p>The Ultra-Lite Bottle Opener combines sleek design with premium functionality. Crafted from aerospace-grade aluminum, this lightweight tool is perfect for outdoor enthusiasts and everyday use.</p>
-            </div>
-
-            <div class="product-options">
-              <div class="color-options">
-                <h3>Color</h3>
-                <div class="color-buttons">
-                  <button class="color-btn active" data-color="silver"></button>
-                  <button class="color-btn" data-color="black"></button>
-                  <button class="color-btn" data-color="gold"></button>
+        <div class="product-details-right">
+          <div class="details-section" id="reviews">
+            <h2>Customer Reviews</h2>
+            <div class="reviews-container">
+              <div class="review-card">
+                <div class="review-header">
+                  <div class="reviewer-info">
+                    <h3>Sarah Johnson</h3>
+                    <span class="review-date">March 15, 2024</span>
+                  </div>
+                  <div class="review-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
                 </div>
+                <p class="review-text">This bottle opener is a game-changer! The aerospace-grade aluminum makes it
+                  incredibly lightweight yet durable. I love the sleek design and how easily it fits in my pocket.</p>
               </div>
-            </div>
 
-            <div class="add-to-cart">
-              <div class="quantity-selector">
-                <button class="qty-btn" onclick="decrementQty()">-</button>
-                <input type="number" id="quantity" value="1" min="1" max="10">
-                <button class="qty-btn" onclick="incrementQty()">+</button>
+              <div class="review-card">
+                <div class="review-header">
+                  <div class="reviewer-info">
+                    <h3>Mike Thompson</h3>
+                    <span class="review-date">March 10, 2024</span>
+                  </div>
+                  <div class="review-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                </div>
+                <p class="review-text">Great quality and design. The anodized finish looks premium and hasn't shown any wear
+                  after a month of use. Would've given 5 stars but the price is a bit steep.</p>
               </div>
-              <button class="add-to-cart-btn">
-                <i class="fas fa-shopping-cart"></i>
-                Add to Cart
-              </button>
-            </div>
 
-            <div class="product-features">
-              <div class="feature">
-                <i class="fas fa-truck"></i>
-                <span>Free Shipping</span>
-              </div>
-              <div class="feature">
-                <i class="fas fa-undo"></i>
-                <span>30-Day Returns</span>
-              </div>
-              <div class="feature">
-                <i class="fas fa-shield-alt"></i>
-                <span>2-Year Warranty</span>
+              <div class="review-card">
+                <div class="review-header">
+                  <div class="reviewer-info">
+                    <h3>Emily Chen</h3>
+                    <span class="review-date">March 5, 2024</span>
+                  </div>
+                  <div class="review-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                </div>
+                <p class="review-text">Perfect for outdoor activities! I take it camping and hiking, and it's so light I
+                  barely notice it's there. The minimalist design is exactly what I was looking for.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
+  </main>
 
-      <section class="product-details">
-        <div class="tabs">
-          <button class="tab-btn active" data-tab="description">Description</button>
-          <button class="tab-btn" data-tab="specifications">Specifications</button>
-          <button class="tab-btn" data-tab="reviews">Reviews</button>
-        </div>
+  <script src="script.js"></script>
+</body>
 
-        <div class="tab-content active" id="description">
-          <h2>Product Description</h2>
-          <p>Detailed product description and features...</p>
-        </div>
-
-        <div class="tab-content" id="specifications">
-          <h2>Technical Specifications</h2>
-          <ul class="specs-list">
-            <li><strong>Material:</strong> Aerospace-grade aluminum</li>
-            <li><strong>Weight:</strong> 1.2 oz (34g)</li>
-            <li><strong>Dimensions:</strong> 3.5" x 1.2" x 0.3"</li>
-            <li><strong>Finish:</strong> Anodized</li>
-          </ul>
-        </div>
-
-        <div class="tab-content" id="reviews">
-          <h2>Customer Reviews</h2>
-          <!-- Reviews content -->
-        </div>
-      </section>
-    </main>
-
-    <script src="script.js"></script>
-  </body>
 </html>
