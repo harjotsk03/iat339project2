@@ -1,7 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #23473c;
+  --secondary: #9f7d3c;
+  --alternate: #F4EBD0;
+  --bg-light: white;
+  --bg-dark: #0a0d10;
+  --text-color: #0a0d10;
+}
+
+
 .product-container {
   margin: 0 auto;
   padding: 4rem;
   padding-top: 8rem;
+  background-color: var(--bg-light);
+  font-family: "Poppins", sans-serif;
 }
 
 .productPageHeroSection {
@@ -72,6 +86,8 @@
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: var(--text-color);
+  font-family: var(--font-primary);
+  font-weight: 700;
 }
 
 .product-rating {
@@ -92,7 +108,7 @@
 .current-price {
   font-size: 2rem;
   font-weight: bold;
-  color: var(--primary-color);
+  color: var(--primary);
 }
 
 .original-price {
@@ -102,7 +118,7 @@
 }
 
 .discount-badge {
-  background: #ff4444;
+  background: var(--secondary);
   color: white;
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
@@ -168,7 +184,7 @@
 .add-to-cart-btn {
   flex: 1;
   padding: 1rem;
-  background: var(--primary-color);
+  background: var(--primary);
   color: white;
   border: none;
   border-radius: 8px;
@@ -177,7 +193,7 @@
 }
 
 .add-to-cart-btn:hover {
-  background: var(--secondary-color);
+  background: var(--secondary);
 }
 
 .product-features {
@@ -194,7 +210,7 @@
 
 .feature i {
   font-size: 1.5rem;
-  color: var(--primary-color);
+  color: var(--primary);
   margin-bottom: 0.5rem;
 }
 
@@ -219,8 +235,8 @@
 }
 
 .tab-btn.active {
-  border-bottom-color: var(--primary-color);
-  color: var(--primary-color);
+  border-bottom-color: var(--primary);
+  color: var(--primary);
 }
 
 .tab-content {
