@@ -1,4 +1,5 @@
 // Product data array
+// Product data array
 const products = [
     {
         id: 1,
@@ -97,7 +98,7 @@ const products = [
         images: {
             primary: "./assets/ULsideTableOrange1.png",
             secondary: "./assets/ULsideTableOrange2.png"
-        }
+                }
     },
     {
         id: 10,
@@ -144,13 +145,13 @@ function createProductCard(product) {
             </div>
             <div class="product-info">
                 <div class="product-name">
-                <h3>${product.name}</h3>
-                <h4>${product.price}</h4>
+                    <h3>${product.name}</h3>
+                    <h4>${product.price}</h4>
                 </div>
                 <p>${product.description}</p>
                 <div class="product-actions">
                     <a href="product.html" class="view-btn">View Product</a>
-                    <button class="cart-btn">Add to Cart</button>
+                    <button class="cart-btn" onclick="addToCart(${product.id})">Add to Cart</button>
                 </div>
             </div>
         </div>
@@ -320,3 +321,63 @@ function clearAllFilters() {
     allOption.checked = true;
     allOption.dispatchEvent(new Event('change'));
 }
+
+// Update the createProductCard function
+function createProductCard(product) {
+    return `
+        <div class="product-card" data-category="${product.category}">
+            <div class="product-image-container">
+                <img src="${product.images.primary}" alt="${product.name}" class="primary-image">
+                <img src="${product.images.secondary}" alt="${product.name} Alternate View" class="secondary-image">
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    <h3>${product.name}</h3>
+                    <h4>${product.price}</h4>
+                </div>
+                <p>${product.description}</p>
+                <div class="product-actions">
+                    <a href="product.html" class="view-btn">View Product</a>
+                    <button class="cart-btn" onclick="addToCart(${product.id})">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+// Cart functionality
+function addToCart(productId) {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const product = products.find(p => p.id === productId);
+    
+    if (product) {
+        const existingItem = cart.find(item => item.id === productId);
+        if (existingItem) {
+            existingItem.quantity += 1;
+        } else {
+            cart.push({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                image: product.images.primary,
+                quantity: 1
+            });
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+    }
+}
+
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const count = cart.reduce((total, item) => total + item.quantity, 0);
+    const cartCountElements = document.querySelectorAll('#cart-count');
+    cartCountElements.forEach(el => {
+        if (el) el.textContent = count;
+    });
+}
+
+// Initialize cart count on page load
+document.addEventListener('DOMContentLoaded', () => {
+    updateCartCount();
+});

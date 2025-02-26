@@ -17,7 +17,7 @@
           <a href="./product.html" class="active">Products</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
-          <a href="./cart.html">Cart</a>
+          <a href="./cart.html">Cart (<span id="cart-count">0</span>)</a>
         </div>
       
         <button class="icon" onclick="myFunction()">
@@ -68,10 +68,8 @@
                         <option value="name">Sort: Name A-Z</option>
                     </select>
                 </div>
+                <div class="active-filters"></div>
             </div>
-        </div>
-        <div class="active-filters">
-            <!-- Active filters will be dynamically inserted here -->
         </div>
 
         <div class="products-grid">
@@ -79,16 +77,17 @@
         </div>
 
         <!-- Newsletter Section -->
-        <section class="newsletter">
+        <!-- <section class="newsletter">
             <h2>Stay Updated</h2>
             <p>Subscribe to our newsletter for new products and exclusive offers.</p>
             <form class="newsletter-form">
                 <input type="email" placeholder="Enter your email">
                 <button type="submit">Subscribe</button>
             </form>
-        </section>
+        </section> -->
     </main>
 
+    <script src="script.js"></script>
     <script src="products.js"></script>
 </body>
 </html>
