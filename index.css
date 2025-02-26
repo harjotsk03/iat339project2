@@ -1,0 +1,31 @@
+.homePageHeroSection {
+  background-color: red;
+  height: 100vh;
+}
+
+.homePageFirstSection {
+  background-color: orange;
+  height: 100vh;
+}
+
+.homePageSecondSection {
+  background-color: blue;
+  height: 100vh;
+}
+
+@media screen and (max-width: 50rem) {
+  .homePageHeroSection {
+    background-color: red;
+    height: 50vh;
+  }
+
+  .homePageFirstSection {
+    background-color: orange;
+    height: 50vh;
+  }
+
+  .homePageSecondSection {
+    background-color: blue;
+    height: 50vh;
+  }
+}
