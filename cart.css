@@ -33,7 +33,7 @@
 
 .cart-content {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
 }
 
@@ -87,13 +87,43 @@
     gap: 0.5rem;
 }
 
-.quantity-btn {
-    padding: 0.25rem 0.75rem;
-    border: 1px solid #ddd;
-    background: white;
-    border-radius: 4px;
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .qty-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
     cursor: pointer;
-}
+    transition: background-color 0.3s ease;
+  }
+  
+  .qty-btn:hover {
+    background: var(--secondary);
+  }
+  
+  #quantity {
+    width: max-content;
+    padding-left: 1rem;
+    text-align: center;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    color: var(--text-color);
+  }
 
 .remove-btn {
     color: #ff4444;
@@ -104,11 +134,13 @@
 }
 
 .cart-summary {
-    background: white;
+    background: rgb(244, 244, 244);
     padding: 2rem;
     border-radius: 12px;
     position: sticky;
     top: 2rem;
+    height: max-content;
+    margin-bottom: 2rem;
 }
 
 .cart-summary h2 {
@@ -149,20 +181,39 @@
 }
 
 @media screen and (max-width: 768px) {
+    .cart-hero {
+        margin-bottom: 1rem;
+    }
+
     .cart-container {
-        padding: 4rem 1rem;
+        padding: 2rem 1rem;
     }
 
     .cart-content {
         grid-template-columns: 1fr;
+        margin-top: 0;
     }
 
     .cart-item {
         flex-direction: column;
+        padding: 0.5rem;
     }
 
     .cart-item-image {
         width: 100%;
         height: 200px;
+    }
+
+    .cart-summary {
+        position: relative;
+        top: 0;
+        margin: 1rem 0 3rem 0;
+        padding: 1.5rem;
+    }
+
+    .checkout-btn {
+        margin-bottom: 0.5rem;
+        width: 100%;
+        box-sizing: border-box;
     }
 }

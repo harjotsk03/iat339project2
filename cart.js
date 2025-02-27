@@ -55,9 +55,9 @@ function renderCart() {
                 <p class="cart-item-price">${item.price}</p>
                 <div class="cart-item-actions">
                     <div class="quantity-controls">
-                        <button class="quantity-btn" onclick="updateQuantity(${item.id}, -1)">-</button>
-                        <span>${item.quantity}</span>
-                        <button class="quantity-btn" onclick="updateQuantity(${item.id}, 1)">+</button>
+                        <button class="qty-btn" onclick="updateQuantity(${item.id}, -1)">-</button>
+                        <input type="number" id="quantity" value="${item.quantity}" min="1" max="10" readonly>
+                        <button class="qty-btn" onclick="updateQuantity(${item.id}, 1)">+</button>
                     </div>
                     <button class="remove-btn" onclick="removeFromCart(${item.id})">Remove</button>
                 </div>

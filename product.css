@@ -127,33 +127,6 @@
   font-size: 0.9rem;
 }
 
-.color-options {
-  margin-bottom: 2rem;
-}
-
-.color-buttons {
-  display: flex;
-  gap: 1rem;
-  margin-top: 0.5rem;
-}
-
-.color-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.color-btn:hover {
-  transform: scale(1.1);
-}
-
-.color-btn.active {
-  border-color: var(--primary-color);
-}
-
 .add-to-cart {
   display: flex;
   gap: 1rem;
