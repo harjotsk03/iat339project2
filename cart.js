@@ -14,7 +14,7 @@ function updateCartCount() {
 function addToCart(productId) {
     const cart = JSON.parse(localStorage.getItem('cart'));
     const product = products.find(p => p.id === productId);
-    
+
     if (product) {
         const existingItem = cart.find(item => item.id === productId);
         if (existingItem) {
@@ -37,7 +37,7 @@ function addToCart(productId) {
 function renderCart() {
     const cart = JSON.parse(localStorage.getItem('cart'));
     const cartContainer = document.getElementById('cart-items');
-    
+
     if (!cartContainer) return;
 
     if (cart.length === 0) {
@@ -59,7 +59,10 @@ function renderCart() {
                         <input type="number" id="quantity" value="${item.quantity}" min="1" max="10" readonly>
                         <button class="qty-btn" onclick="updateQuantity(${item.id}, 1)">+</button>
                     </div>
-                    <button class="remove-btn" onclick="removeFromCart(${item.id})">Remove</button>
+                    <button class="remove-btn" onclick="removeFromCart(${item.id})">
+                    <i class="fas fa-trash"></i>
+                    <span>Remove</span>
+                </button>
                 </div>
             </div>
         </div>
@@ -72,7 +75,7 @@ function renderCart() {
 function updateQuantity(productId, change) {
     const cart = JSON.parse(localStorage.getItem('cart'));
     const item = cart.find(item => item.id === productId);
-    
+
     if (item) {
         item.quantity += change;
         if (item.quantity <= 0) {

@@ -73,18 +73,58 @@
         </div>
 
         <div class="products-grid">
-            <!-- Products will be dynamically inserted here -->
+            <div class="product-card" data-category="tables">
+                <div class="product-image-container">
+                    <img src="./assets/ULcoffeeTable2.png" alt="Our main Coffee Table" class="primary-image">
+                    <img src="./assets/ULcoffeeTable2.png" alt="Our main Coffee Table Alternate View" class="secondary-image">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">
+                        <h3>Coffee Table</h3>
+                        <h4>$100.00 CAD</h4>
+                    </div>
+                    <p>Low surface for the display of aesthetically pleasing objects and publications for amelioration of status.</p>
+                    <div class="product-actions">
+                        <a href="product.html" class="view-btn">View Product</a>
+                        <button class="cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="${product.category}">
+                <div class="product-image-container">
+                    <img src="./assets/ULbottleOpener1.png" alt="Bottle Opener" class="primary-image">
+                    <img src="./assets/ULbottleOpener1.png" alt="Bottle Opener" class="secondary-image">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">
+                        <h3>Modern Dining Table</h3>
+                        <h4>599 dollars</h4>
+                    </div>
+                    <p>Sleek dining table perfect for modern homes.</p>
+                    <div class="product-actions">
+                        <a href="product.html" class="view-btn">View Product</a>
+                        <button class="cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="${product.category}">
+                <div class="product-image-container">
+                    <img src="./assets/ULbottleOpener1.png" alt="Bottle Opener" class="primary-image">
+                    <img src="./assets/ULbottleOpener1.png" alt="Bottle Opener" class="secondary-image">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">
+                        <h3>Modern Dining Table</h3>
+                        <h4>599 dollars</h4>
+                    </div>
+                    <p>Sleek dining table perfect for modern homes.</p>
+                    <div class="product-actions">
+                        <a href="product.html" class="view-btn">View Product</a>
+                        <button class="cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- Newsletter Section -->
-        <!-- <section class="newsletter">
-            <h2>Stay Updated</h2>
-            <p>Subscribe to our newsletter for new products and exclusive offers.</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Enter your email">
-                <button type="submit">Subscribe</button>
-            </form>
-        </section> -->
     </main>
 
     <footer class="footer">
@@ -111,7 +151,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="products.js"></script>
+    <!-- <script src="script.js"></script>
+    <script src="products.js"></script> -->
 </body>
 </html>

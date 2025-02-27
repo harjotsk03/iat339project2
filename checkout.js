@@ -81,4 +81,18 @@ document.getElementById('expiryDate').addEventListener('input', (e) => {
 // Limit CVV to 3-4 digits
 document.getElementById('cvv').addEventListener('input', (e) => {
     e.target.value = e.target.value.replace(/\D/g, '').substring(0, 4);
-}); 
+});
+
+function updateCheckoutSummary() {
+    const cart = JSON.parse(localStorage.getItem('cart'));
+    const subtotal = cart.reduce((total, item) => {
+        const price = parseFloat(item.price.replace('$', ''));
+        return total + (price * item.quantity);
+    }, 0);
+
+    document.getElementById('checkout-subtotal').textContent = `$${subtotal.toFixed(2)}`;
+    document.getElementById('checkout-total').textContent = `$${subtotal.toFixed(2)}`;
+}
+
+// Call this when page loads
+document.addEventListener('DOMContentLoaded', updateCheckoutSummary);

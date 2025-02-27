@@ -234,8 +234,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         
-        const productsGrid = document.querySelector('.products-grid');
-        productsArray.forEach(card => productsGrid.appendChild(card));
+        // const productsGrid = document.querySelector('.products-grid');
+        // productsArray.forEach(card => productsGrid.appendChild(card));
     });
 
     // Dropdown functionality
