@@ -26,107 +26,277 @@
       </nav>
 
     <main class="products-container">
-        <!-- Hero Section -->
         <section class="products-hero">
-            <h1>Our Collection</h1>
-            <p>Discover our carefully curated selection of modern furniture pieces.</p>
+            <h1>Our Products</h1>
+            <p>Discover our collection of modern furniture; use the navigation below to find what you're looking for quickly.</p>
+            <nav class="category-nav">
+                <a href="#tables" class="category-link">Tables</a>
+                <a href="#seating" class="category-link">Seating</a>
+                <a href="#shelving" class="category-link">Shelving</a>
+                <a href="#misc" class="category-link">Miscellaneous</a>
+            </nav>
         </section>
 
-        <!-- Results and Controls -->
-        <div class="product-controls">
-            <div class="results-count">
-                <p>Results (<span id="product-count">0</span>)</p>
-            </div>
-            <div class="controls-group">
-                <div class="filter-dropdown">
-                    <button class="filter-btn" aria-expanded="false" aria-haspopup="true">
-                        Filter <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="filter-menu" role="menu">
-                        <label class="filter-option" tabindex="0" role="menuitemcheckbox" aria-checked="true">
-                            <input type="checkbox" value="all" checked> All Products
-                        </label>
-                        <label class="filter-option" tabindex="0" role="menuitemcheckbox" aria-checked="false">
-                            <input type="checkbox" value="seating"> Seating
-                        </label>
-                        <label class="filter-option" tabindex="0" role="menuitemcheckbox" aria-checked="false">
-                            <input type="checkbox" value="tables"> Tables
-                        </label>
-                        <label class="filter-option" tabindex="0" role="menuitemcheckbox" aria-checked="false">
-                            <input type="checkbox" value="shelving"> Shelving
-                        </label>
-                        <label class="filter-option" tabindex="0" role="menuitemcheckbox" aria-checked="false">
-                            <input type="checkbox" value="misc"> Misc
-                        </label>
-                    </div>
+        <section id="tables" class="product-category">
+            <h2>Tables</h2>
+            <p class="product-category-description">These are all the tables we have in our collection.</p>
+            <div class="products-grid">
+                <div class="product-card">
+                    <a href="product.html" class="product-link">
+                        <div class="product-image-container">
+                            <img src="./assets/ULcoffeeTable1.png" alt="Our main Coffee Table" class="primary-image">
+                            <img src="./assets/ULcoffeeTable2.png" alt="Our main Coffee Table Alternate View" class="secondary-image">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">
+                                <h3>Coffee Table</h3>
+                                <h4>$100.00 CAD</h4>
+                            </div>
+                            <p>Low surface for the display of aesthetically pleasing objects and publications for amelioration of status.</p>
+                            <div class="product-actions">
+                                <span class="view-btn">View Product</span>
+                                <span class="cart-btn">Add to Cart</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="sort-options">
-                    <select id="sort" name="sort">
-                        <option value="featured">Sort: Featured</option>
-                        <option value="price-low">Sort: Price Low to High</option>
-                        <option value="price-high">Sort: Price High to Low</option>
-                        <option value="name">Sort: Name A-Z</option>
-                    </select>
+                <div class="product-card">
+                    <a href="product.html" class="product-link">
+                        <div class="product-image-container">
+                            <img src="./assets/ULLowCoffeeTable1.png" alt="Our main Low Coffee Table" class="primary-image">
+                            <img src="./assets/ULLowCoffeeTable2.png" alt="Our main Low Coffee Table Alternate View" class="secondary-image">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">
+                                <h3>Low Coffee Table</h3>
+                                <h4>$85.00 CAD</h4>
+                            </div>
+                            <p>Low surface for the display of aesthetically pleasing objects and publications for amelioration of status.</p>
+                            <div class="product-actions">
+                                <span class="view-btn">View Product</span>
+                                <span class="cart-btn">Add to Cart</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="active-filters"></div>
+                <div class="product-card">
+                    <a href="product.html" class="product-link">
+                        <div class="product-image-container">
+                            <img src="./assets/ULsideTableOrange1.png" alt="Our main Side Table" class="primary-image">
+                            <img src="./assets/ULsideTableOrange2.png" alt="Our main Side Table Alternate View" class="secondary-image">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">
+                                <h3>Side Table</h3>
+                                <h4>$50.00 CAD</h4>
+                            </div>
+                            <p>Raised surface to ensure necessary items for domestic enjoyment are within close proximity.</p>
+                            <div class="product-actions">
+                                <span class="view-btn">View Product</span>
+                                <span class="cart-btn">Add to Cart</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="products-grid">
-            <div class="product-card" data-category="tables">
-                <div class="product-image-container">
-                    <img src="./assets/ULcoffeeTable2.png" alt="Our main Coffee Table" class="primary-image">
-                    <img src="./assets/ULcoffeeTable2.png" alt="Our main Coffee Table Alternate View" class="secondary-image">
+        <section id="seating" class="product-category">
+            <h2>Seating</h2>
+            <p class="product-category-description">These are all the seating we have in our collection.</p>
+            <div class="products-grid">
+                <div class="product-card">
+                    <a href="product.html" class="product-link">
+                        <div class="product-image-container">
+                            <img src="./assets/ULthreeSeaterSofa1.png" alt="Our main 3 Seater Sofa" class="primary-image">
+                            <img src="./assets/ULthreeSeaterSofa2.png" alt="Our main 3 Seater Sofa Alternate View" class="secondary-image">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">
+                                <h3>3 Seater Sofa</h3>
+                                <h4>$90.00 CAD</h4>
+                            </div>
+                            <p>Multi-purpose seating solution for moments of social connection and occasional lethargy.</p>
+                            <div class="product-actions">
+                                <span class="view-btn">View Product</span>
+                                <span class="cart-btn">Add to Cart</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="product-info">
-                    <div class="product-name">
-                        <h3>Coffee Table</h3>
-                        <h4>$100.00 CAD</h4>
-                    </div>
-                    <p>Low surface for the display of aesthetically pleasing objects and publications for amelioration of status.</p>
-                    <div class="product-actions">
-                        <a href="product.html" class="view-btn">View Product</a>
-                        <button class="cart-btn">Add to Cart</button>
-                    </div>
+                <div class="product-card">
+                    <a href="product.html" class="product-link">
+                        <div class="product-image-container">
+                            <img src="./assets/ULtwoSeaterSofa1.png" alt="Our main 2 Seater Sofa" class="primary-image">
+                            <img src="./assets/ULtwoSeaterSofa2.png" alt="Our main 2 Seater Sofa Alternate View" class="secondary-image">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">
+                                <h3>2 Seater Sofa</h3>
+                                <h4>$75.00 CAD</h4>
+                            </div>
+                            <p>Multi-purpose seating solution for moments of social connection and occasional lethargy.</p>
+                            <div class="product-actions">
+                                <span class="view-btn">View Product</span>
+                                <span class="cart-btn">Add to Cart</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card">
+                    <a href="product.html" class="product-link">
+                        <div class="product-image-container">
+                            <img src="./assets/ULoneSeaterChair1.png" alt="Our main One Seater Chair" class="primary-image">
+                            <img src="./assets/ULoneSeaterChair2.png" alt="Our main One Seater Chair Alternate View" class="secondary-image">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">
+                                <h3>1 Seater Chair</h3>
+                                <h4>$60.00 CAD</h4>
+                            </div>
+                            <p>Seating solution for common recreational activities including media consumption via laptop computer.</p>
+                            <div class="product-actions">
+                                <span class="view-btn">View Product</span>
+                                <span class="cart-btn">Add to Cart</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
 
-            <div class="product-card" data-category="${product.category}">
-                <div class="product-image-container">
-                    <img src="./assets/ULbottleOpener1.png" alt="Bottle Opener" class="primary-image">
-                    <img src="./assets/ULbottleOpener1.png" alt="Bottle Opener" class="secondary-image">
+        </section>
+
+        <section id="shelving" class="product-category">
+            <h2>Shelving</h2>
+            <p class="product-category-description">These are all the shelving we have in our collection.</p>
+            <div class="products-grid">
+                <div class="product-card">
+                    <a href="product.html" class="product-link">
+                        <div class="product-image-container">
+                            <img src="./assets/ULfiveTierShelving1.png" alt="Our main 5 Tier Shelving" class="primary-image">
+                            <img src="./assets/ULfiveTierShelving3.png" alt="Our main 5 Tier Shelving Alternate View" class="secondary-image">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">
+                                <h3>5 Tier Shelving</h3>
+                                <h4>$75.00 CAD</h4>
+                            </div>
+                            <p>Vertical storage and display solution for publications, collectables, and audio equipment recordings.</p>
+                            <div class="product-actions">
+                                <span class="view-btn">View Product</span>
+                                <span class="cart-btn">Add to Cart</span>
+                            </div>
+                        </div>
+                    </a>
+                  
                 </div>
-                <div class="product-info">
-                    <div class="product-name">
-                        <h3>Modern Dining Table</h3>
-                        <h4>599 dollars</h4>
-                    </div>
-                    <p>Sleek dining table perfect for modern homes.</p>
-                    <div class="product-actions">
-                        <a href="product.html" class="view-btn">View Product</a>
-                        <button class="cart-btn">Add to Cart</button>
-                    </div>
+                <div class="product-card">
+                    <a href="product.html" class="product-link">
+                        <div class="product-image-container">
+                            <img src="./assets/ULfourTierShelving1.png" alt="Our main 4 Tier Shelving" class="primary-image">
+                            <img src="./assets/ULfourTierShelving3.png" alt="Our main 4 Tier Shelving Alternate View" class="secondary-image">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">
+                                <h3>4 Tier Shelving</h3>
+                                <h4>$65.00 CAD</h4>
+                            </div>
+                            <p>Vertical storage and display solution for publications, collectables, and sculptural objects.</p>
+                            <div class="product-actions">
+                                <span class="view-btn">View Product</span>
+                                <span class="cart-btn">Add to Cart</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card">
+                    <a href="product.html" class="product-link">
+                        <div class="product-image-container">
+                            <img src="./assets/ULthreeTierShelving1.png" alt="Our main 3 Tier Shelving" class="primary-image">
+                            <img src="./assets/ULthreeTierShelving5.png" alt="Our main 3 Tier Shelving Alternate View" class="secondary-image">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">
+                                <h3>3 Tier Shelving</h3>
+                                <h4>$55.00 CAD</h4>
+                            </div>
+                            <p>Vertical storage and display solution for publications, collectables, and sculptural objects.</p>
+                            <div class="product-actions">
+                                <span class="view-btn">View Product</span>
+                                <span class="cart-btn">Add to Cart</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
-            
-            <div class="product-card" data-category="${product.category}">
-                <div class="product-image-container">
-                    <img src="./assets/ULbottleOpener1.png" alt="Bottle Opener" class="primary-image">
-                    <img src="./assets/ULbottleOpener1.png" alt="Bottle Opener" class="secondary-image">
+
+
+        </section>
+
+        <section id="misc" class="product-category">
+            <h2>Miscellaneous</h2>
+            <p class="product-category-description">These are all the miscellaneous items we have in our collection.</p>
+            <div class="products-grid">
+                <div class="product-card">
+                    <a href="product.html" class="product-link">
+                        <div class="product-image-container">
+                            <img src="./assets/ULbottleOpener1.png" alt="Our main Bottle Opener" class="primary-image">
+                            <img src="./assets/ULbottleOpener2.png" alt="Our main Bottle Opener Alternate View" class="secondary-image">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">
+                                <h3>Bottle Opener</h3>
+                                <h4>$35.00 CAD</h4>
+                            </div>
+                            <p>Opening liquid-filled vessels with the sole intention of indulging in their contents.</p>
+                            <div class="product-actions">
+                                <span class="view-btn">View Product</span>
+                                <span class="cart-btn">Add to Cart</span>
+                            </div>
+                        </div>
+                    </a>
+                  
                 </div>
-                <div class="product-info">
-                    <div class="product-name">
-                        <h3>Modern Dining Table</h3>
-                        <h4>599 dollars</h4>
-                    </div>
-                    <p>Sleek dining table perfect for modern homes.</p>
-                    <div class="product-actions">
-                        <a href="product.html" class="view-btn">View Product</a>
-                        <button class="cart-btn">Add to Cart</button>
-                    </div>
+                <div class="product-card">
+                    <a href="product.html" class="product-link">
+                        <div class="product-image-container">
+                            <img src="./assets/ULtableLamp1.png" alt="Our main Table Lamp" class="primary-image">
+                            <img src="./assets/ULtableLamp2.png" alt="Our main Table Lamp Alternate View" class="secondary-image">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">
+                                <h3>Table Lamp</h3>
+                                <h4>$75.00 CAD</h4>
+                            </div>
+                            <p>A table lamp for the display of aesthetically pleasing objects and publications for amelioration of status.</p>
+                            <div class="product-actions">
+                                <span class="view-btn">View Product</span>
+                                <span class="cart-btn">Add to Cart</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card">
+                    <a href="product.html" class="product-link">
+                        <div class="product-image-container">
+                            <img src="./assets/ULcorporateMug1.png" alt="Our main Corporate Mug" class="primary-image">
+                            <img src="./assets/ULcorporateMug3.png" alt="Our main Corporate Mug Alternate View" class="secondary-image">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">
+                                <h3>Corporate Mug</h3>
+                                <h4>$60.00 CAD</h4>
+                            </div>
+                            <p>A corporate mug for the display of aesthetically pleasing objects and publications for amelioration of status.</p>
+                            <div class="product-actions">
+                                <span class="view-btn">View Product</span>
+                                <span class="cart-btn">Add to Cart</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer class="footer">
@@ -153,7 +323,6 @@
         </div>
     </footer>
 
-    <!-- <script src="script.js"></script>
-    <script src="products.js"></script> -->
+    <script src="script.js"></script>
 </body>
 </html>
