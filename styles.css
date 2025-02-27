@@ -75,11 +75,7 @@
 }
 
 /* Make sure the footer stays at the bottom */
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
