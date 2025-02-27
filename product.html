@@ -28,24 +28,52 @@
   </nav>
 
   <main class="product-container">
+    <div class="nav-bar">
+      <a href="./index.html">Home</a>
+      <p>></p>
+      <a href="./products.html">Products</a>
+      <p>></p>
+      <a class="active" href="./product.html">Bottle Opener</a>
+    </div>
     <div class="productPageHeroSection">
       <div class="productPageHeroSectionLeft">
-        <div class="main-image-container">
-          <img id="mainImage" src="./assets/ULbottleOpener1.png" alt="Main product view">
-        </div>
-        <div class="thumbnail-gallery">
-          <button class="thumbnail active" onclick="changeImage('./assets/ULbottleOpener1.png')">
-            <img src="./assets/ULbottleOpener1.png" alt="Product view 1">
-          </button>
-          <button class="thumbnail" onclick="changeImage('./assets/ULbottleOpener2.png')">
-            <img src="./assets/ULbottleOpener2.png" alt="Product view 2">
-          </button>
-          <button class="thumbnail" onclick="changeImage('./assets/ULbottleOpener3.png')">
-            <img src="./assets/ULbottleOpener3.png" alt="Product view 3">
-          </button>
-          <button class="thumbnail" onclick="changeImage('./assets/ULbottleOpener4.png')">
-            <img src="./assets/ULbottleOpener4.png" alt="Product view 4">
-          </button>
+        <div class="product-image-container">
+          <div class="image-slide">
+              <img src="./assets/ULbottleOpener1.png" alt="Our main Bottle Opener" class="primary-image">
+              <div class="image-dots">
+                  <span class="image-dot active"></span>
+                  <span class="image-dot"></span>
+                  <span class="image-dot"></span>
+                  <span class="image-dot"></span>
+              </div>
+          </div>
+          <div class="image-slide">
+              <img src="./assets/ULbottleOpener2.png" alt="Our main Bottle Opener Second View" class="secondary-image">
+              <div class="image-dots">
+                  <span class="image-dot"></span>
+                  <span class="image-dot active"></span>
+                  <span class="image-dot"></span>
+                  <span class="image-dot"></span>
+              </div>
+          </div>
+          <div class="image-slide">
+              <img src="./assets/ULbottleOpener3.png" alt="Our main Bottle Opener Third View" class="secondary-image">
+              <div class="image-dots">
+                  <span class="image-dot"></span>
+                  <span class="image-dot"></span>
+                  <span class="image-dot active"></span>
+                  <span class="image-dot"></span>
+              </div>
+          </div>
+          <div class="image-slide">
+              <img src="./assets/ULbottleOpener4.png" alt="Our main Bottle Opener Fourth View" class="secondary-image">
+              <div class="image-dots">
+                  <span class="image-dot"></span>
+                  <span class="image-dot"></span>
+                  <span class="image-dot"></span>
+                  <span class="image-dot active"></span>
+              </div>
+          </div>
         </div>
       </div>
 
@@ -188,33 +216,33 @@
         </div>
       </div>
 
-      <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Email: info@yourstore.com</p>
-                <p>Phone: (555) 123-4567</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <p><a href="index.html">Home</a></p>
-                <p><a href="products.html">Products</a></p>
-                <p><a href="about.html">About Us</a></p>
-            </div>
-            <div class="footer-section">
-                <h3>Location</h3>
-                <p>123 Store Street</p>
-                <p>City, State 12345</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Your Store Name. All rights reserved.</p>
-        </div>
-    </footer>
     </section>
   </main>
 
-  <script src="script.js"></script>
+  <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: info@yourstore.com</p>
+            <p>Phone: (555) 123-4567</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <p><a href="index.html">Home</a></p>
+            <p><a href="products.html">Products</a></p>
+            <p><a href="about.html">About Us</a></p>
+        </div>
+        <div class="footer-section">
+            <h3>Location</h3>
+            <p>123 Store Street</p>
+            <p>City, State 12345</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Your Store Name. All rights reserved.</p>
+    </div>
+</footer>
+
 </body>
 
 </html>
