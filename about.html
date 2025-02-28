@@ -10,20 +10,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav class="topnav" id="myTopnav">
+    <nav class="topnav" id="myTopnav" aria-label="Main navigation">
         <a href="./index.html" class="logo">Unboxed Living</a>
-        
+    
         <div class="nav-links">
-            <a href="./index.html">Home</a>
-            <a href="./products.html">Products</a>
-            <a href="./about.html" class="active">About</a>
-            <a href="./cart.html">Cart (<span id="cart-count">0</span>)</a>
+          <a href="./index.html" role="menuitem">Home</a>
+          <a href="./products.html" role="menuitem">Products</a>
+          <a href="./about.html" role="menuitem">About</a>
+          <a href="./cart.html" role="menuitem">Cart (<span id="cart-count" aria-live="polite">0</span>)</a>
         </div>
-        
-        <button class="icon" onclick="myFunction()">
-            <i class="fas fa-bars"></i>
+    
+        <button class="icon" onclick="myFunction()" aria-label="Toggle navigation menu" aria-expanded="false">
+          <i class="fas fa-bars" aria-hidden="true"></i>
         </button>
-    </nav>
+      </nav>
 
     <main class="about-container">
         <section class="about-hero">

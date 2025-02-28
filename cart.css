@@ -56,7 +56,7 @@
 .cart-item-image {
     width: 10rem;
     height: 10rem;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     overflow: hidden;
 }
 
@@ -108,13 +108,13 @@
     align-items: center;
     gap: 0.5rem;
     border: none;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     font-family: "Poppins", sans-serif;
   }
   
   .qty-btn {
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -130,6 +130,14 @@
     background: var(--secondary);
   }
   
+  .qty-btn:focus {
+    outline: 0.125rem solid var(--primary);
+    outline-offset: 0.125rem;
+    box-shadow: 0 0 0 0.125rem rgba(35, 71, 60, 0.2);
+    background-color: var(--secondary);
+    color: var(--bg-light);
+  }
+
   #quantity {
     width: max-content;
     padding-left: 1rem;
@@ -149,7 +157,7 @@
     background: var(--primary);
     color: white;
     border: none;
-    border-radius: 50px;
+    border-radius: 2rem;
     cursor: pointer;
     font-size: 0.9rem;
     font-family: "Poppins", sans-serif;
@@ -162,6 +170,14 @@
     background: var(--secondary);
 }
 
+.remove-btn:focus {
+    outline: 0.125rem solid var(--primary);
+    outline-offset: 0.125rem;
+    box-shadow: 0 0 0 0.125rem rgba(35, 71, 60, 0.2);
+    background-color: var(--secondary);
+    color: var(--bg-light);
+}
+
 .remove-btn i {
     font-size: 0.9rem;
 }
@@ -169,7 +185,7 @@
 .cart-summary {
     background: rgb(244, 244, 244);
     padding: 2rem;
-    border-radius: 12px;
+    border-radius: 0.75rem;
     height: max-content;
     margin-bottom: 2rem;
 }
@@ -185,7 +201,7 @@
 }
 
 .summary-item.total {
-    border-top: 1px solid #ddd;
+    border-top: 0.0625rem solid #ddd;
     padding-top: 1rem;
     margin-top: 1rem;
     font-weight: 600;
@@ -198,7 +214,7 @@
     background: var(--primary);
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     cursor: pointer;
     font-size: 1rem;
     text-decoration: none;
@@ -211,7 +227,15 @@
     background: var(--secondary);
 }
 
-@media screen and (max-width: 768px) {
+.checkout-btn:focus {
+    outline: 0.125rem solid var(--primary);
+    outline-offset: 0.125rem;
+    box-shadow: 0 0 0 0.125rem rgba(35, 71, 60, 0.2);
+    background-color: var(--secondary);
+    color: var(--bg-light);
+}
+
+@media screen and (max-width: 48rem) {
     .cart-hero {
         margin-bottom: 1rem;
     }
@@ -232,7 +256,7 @@
 
     .cart-item-image {
         width: 100%;
-        height: 200px;
+        height: 12.5rem;
     }
 
     .cart-summary {
