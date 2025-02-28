@@ -87,6 +87,8 @@ body {
   .nav-links {
     display: none;
     width: 100%;
+    padding: 0.5rem 0;
+    box-sizing: border-box;
   }
 
   .nav-links a {
@@ -107,13 +109,15 @@ body {
     flex-direction: column;
     width: 100%;
     gap: 0.5rem;
-    align-items: flex-start;
+    align-items: stretch;
   }
 
   .topnav.responsive .nav-links a {
     display: block;
-    width: 100%;
+    width: auto;
     padding: 0.75rem 1rem;
+    box-sizing: border-box;
+    margin: 0;
   }
 
   .topnav .logo {
