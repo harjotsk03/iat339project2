@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --primary: #23473c;
   --secondary: #9f7d3c;
@@ -98,6 +102,23 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    align-items: center;
+    font-size: 0.8rem;
+    margin-top: 0;
+  }
+  
+  .nav-bar a {
+    color: var(--text-color);
+  }
+  
+  .nav-bar a.active {
+    color: var(--secondary);
+  }
 /* Make sure the footer stays at the bottom */
 
 
@@ -125,5 +146,38 @@
     
     .footer-section button[type="submit"] {
         width: 100%;
+    }
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--primary);
+    color: white;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.scroll-top:hover {
+    opacity: 1;
+    background: var(--secondary);
+    transform: translateY(-3px);
+}
+
+@media screen and (max-width: 768px) {
+    .scroll-top {
+        bottom: 1rem;
+        right: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
     }
 }

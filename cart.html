@@ -26,19 +26,69 @@
     </nav>
 
     <main class="cart-container">
+        <div class="nav-bar">
+            <a href="./index.html">Home</a>
+            <p>></p>
+            <a href="./products.html">Products</a>
+            <p>></p>
+            <a href="./product.html">Bottle Opener</a>
+            <p>></p>
+            <a class="active" href="./cart.html">Cart</a>
+          </div>
         <section class="cart-hero">
             <h1>Your Cart</h1>
             <p>Review your items before checkout</p>
         </section>
 
         <div class="cart-content">
-            <div id="cart-items" class="cart-items-container"></div>
+            <div id="cart-items" class="cart-items-container">
+                <div class="cart-item">
+                    <div class="cart-item-image">
+                        <img src="./assets/ULbottleOpener1.png" alt="Our main Bottle Opener">
+                    </div>
+                    <div class="cart-item-details">
+                        <h3 class="cart-item-name">Bottle Opener</h3>
+                        <p class="cart-item-price">$50.00</p>
+                        <div class="cart-item-actions">
+                            <div class="quantity-controls">
+                                <button class="qty-btn">-</button>
+                                <input type="number" id="quantity" value="1" min="1" max="10" readonly>
+                                <button class="qty-btn">+</button>
+                            </div>
+                            <button class="remove-btn">
+                            <i class="fas fa-trash"></i>
+                            <span>Remove</span>
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <div class="cart-item-image">
+                        <img src="./assets/ULcoffeeTable1.png" alt="Our main Coffee Table">
+                    </div>
+                    <div class="cart-item-details">
+                        <h3 class="cart-item-name">Coffee Table</h3>
+                        <p class="cart-item-price">$100.00</p>
+                        <div class="cart-item-actions">
+                            <div class="quantity-controls">
+                                <button class="qty-btn">-</button>
+                                <input type="number" id="quantity" value="2" min="1" max="10" readonly>
+                                <button class="qty-btn">+</button>
+                            </div>
+                            <button class="remove-btn">
+                            <i class="fas fa-trash"></i>
+                            <span>Remove</span>
+                        </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="cart-summary">
                 <h2>Order Summary</h2>
                 <div class="summary-items">
                     <div class="summary-item">
                         <span>Subtotal</span>
-                        <span id="subtotal">$0.00</span>
+                        <span id="subtotal">$150.00</span>
                     </div>
                     <div class="summary-item">
                         <span>Shipping</span>
@@ -46,7 +96,7 @@
                     </div>
                     <div class="summary-item total">
                         <span>Total</span>
-                        <span id="total">$0.00</span>
+                        <span id="total">$150.00</span>
                     </div>
                 </div>
                 <a href="./checkout.html" class="checkout-btn">Proceed to Checkout</a>
@@ -79,6 +129,5 @@
     </footer>
 
     <script src="script.js"></script>
-    <script src="cart.js"></script>
 </body>
 </html>
