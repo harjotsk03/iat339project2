@@ -23,7 +23,7 @@
 
 .product-card {
     background: rgb(244, 244, 244);
-    border-radius: 12px;
+    border-radius: 0.75rem;
     overflow: hidden;
     transition: transform 0.3s ease;
 }
@@ -32,12 +32,30 @@
     transform: translateY(-0.2rem);
 }
 
+.product-card:focus-within {
+    transform: translateY(-0.2rem);
+}
+
+.product-card:focus-within .secondary-image {
+    opacity: 1;
+}
+
+.product-card:focus-within .primary-image {
+    opacity: 0;
+}
+
 .product-link {
     display: block;
     text-decoration: none;
     color: inherit;
     height: 100%;
     width: 100%;
+}
+
+.product-link:focus-visible {
+    outline: 0.125rem solid var(--primary);
+    outline-offset: 0.125rem;
+    box-shadow: 0 0 0 0.125rem rgba(35, 71, 60, 0.2);
 }
 
 .product-name {
@@ -123,9 +141,21 @@
     color: white;
 }
 
+.view-btn:focus {
+    outline: 0.125rem solid var(--primary);
+    outline-offset: 0.125rem;
+    box-shadow: 0 0 0 0.125rem rgba(35, 71, 60, 0.2);
+}
+
 .cart-btn {
     background: var(--secondary);
     color: white;
+}
+
+.cart-btn:focus {
+    outline: 0.125rem solid var(--primary);
+    outline-offset: 0.125rem;
+    box-shadow: 0 0 0 0.125rem rgba(35, 71, 60, 0.2);
 }
 
 .products-hero h1 {
@@ -251,37 +281,10 @@
     gap: 0.5rem;
 }
 
-.filter-menu {
-    position: absolute;
-    top: calc(100% + 0.5rem);
-    left: 0;
-    width: max-content;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 0.5rem;
-    display: none;
-    z-index: 1000;
-}
-
-.filter-option {
-    display: flex;
-    align-items: center;
-    padding: 0.75rem 1rem;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: background-color 0.2s ease;
-}
-
-.filter-option:hover {
-    background-color: #f5f5f5;
-}
-
-.filter-option input[type="checkbox"] {
-    margin-right: 0.75rem;
-    width: 16px;
-    height: 16px;
-    accent-color: var(--primary);
+.filter-btn:focus {
+    outline: 0.125rem solid var(--primary);
+    outline-offset: 0.125rem;
+    box-shadow: 0 0 0 0.125rem rgba(35, 71, 60, 0.2);
 }
 
 /* Style for the chevron icon */
@@ -327,16 +330,23 @@
 .newsletter-form {
     display: flex;
     gap: 1rem;
-    max-width: 500px;
+    max-width: 31.25rem;
     margin: 2rem auto 0;
 }
 
 .newsletter-form input {
     flex: 1;
     padding: 0.75rem 1rem;
-    border: 1px solid #ddd;
-    border-radius: 6px;
+    border: 0.0625rem solid #ddd;
+    border-radius: 0.375rem;
     font-family: inherit;
+}
+
+.newsletter-form input:focus {
+    outline: 0.125rem solid var(--primary);
+    outline-offset: 0.125rem;
+    box-shadow: 0 0 0 0.125rem rgba(35, 71, 60, 0.2);
+    background-color: var(--alternate);
 }
 
 .newsletter-form button {
@@ -347,6 +357,14 @@
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+.newsletter-form button:focus {
+    outline: 0.125rem solid var(--primary);
+    outline-offset: 0.125rem;
+    box-shadow: 0 0 0 0.125rem rgba(35, 71, 60, 0.2);
+    background-color: var(--secondary);
+    color: var(--bg-light);
 }
 
 .newsletter-form button:hover {
@@ -367,7 +385,7 @@
     padding: 0.5rem 1rem;
     background: var(--primary);
     color: white;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     font-size: 0.9rem;
 }
 
@@ -380,6 +398,14 @@
     display: flex;
     align-items: center;
     font-size: 0.8rem;
+}
+
+.filter-tag button:focus {
+    outline: 0.125rem solid var(--primary);
+    outline-offset: 0.125rem;
+    box-shadow: 0 0 0 0.125rem rgba(35, 71, 60, 0.2);
+    background-color: var(--secondary);
+    color: var(--bg-light);
 }
 
 .filter-tag button:hover {
@@ -396,6 +422,14 @@
     border: 1px solid var(--primary);
     border-radius: 20px;
     transition: all 0.3s ease;
+}
+
+.clear-all-filters:focus {
+    outline: 0.125rem solid var(--primary);
+    outline-offset: 0.125rem;
+    box-shadow: 0 0 0 0.125rem rgba(35, 71, 60, 0.2);
+    background-color: var(--secondary);
+    color: var(--bg-light);
 }
 
 .clear-all-filters:hover {
@@ -420,6 +454,14 @@
     transition: background 0.3s ease;
 }
 
+.category-link:focus {
+    outline: 0.125rem solid var(--primary);
+    outline-offset: 0.125rem;
+    box-shadow: 0 0 0 0.125rem rgba(35, 71, 60, 0.2);
+    background-color: var(--secondary);
+    color: var(--bg-light);
+}
+
 .category-link:hover {
     background: var(--secondary);
 }
@@ -428,8 +470,7 @@
     scroll-margin-top: 8rem;
 }
 
-@media screen and (max-width: 768px) {
-
+@media screen and (max-width: 48rem) {
     .product-image-container {
         height: 12rem;
     }

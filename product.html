@@ -8,22 +8,22 @@
   <link rel="stylesheet" href="product.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>Bottle Opener | Unboxed Living</title>
 </head>
 
 <body>
-  <nav class="topnav" id="myTopnav">
+  <nav class="topnav" id="myTopnav" aria-label="Main navigation">
     <a href="./index.html" class="logo">Unboxed Living</a>
 
     <div class="nav-links">
-      <a href="./index.html">Home</a>
-      <a href="./products.html">Products</a>
-      <a href="./about.html">About</a>
-      <a href="./cart.html">Cart (<span id="cart-count">0</span>)</a>
+      <a href="./index.html" role="menuitem">Home</a>
+      <a href="./products.html" role="menuitem">Products</a>
+      <a href="./about.html" role="menuitem">About</a>
+      <a href="./cart.html" role="menuitem">Cart (<span id="cart-count" aria-live="polite">0</span>)</a>
     </div>
 
-    <button class="icon" onclick="myFunction()">
-      <i class="fas fa-bars"></i>
+    <button class="icon" onclick="myFunction()" aria-label="Toggle navigation menu" aria-expanded="false">
+      <i class="fas fa-bars" aria-hidden="true"></i>
     </button>
   </nav>
 
@@ -39,7 +39,7 @@
       <div class="productPageHeroSectionLeft">
         <div class="product-image-container">
           <div class="image-slide">
-              <img src="./assets/ULbottleOpener1.png" alt="Our main Bottle Opener" class="primary-image">
+              <img src="./assets/ULbottleOpener1.png" alt="Minimalist aluminum bottle opener with sleek industrial design - front view" class="primary-image">
               <div class="image-dots">
                   <span class="image-dot active"></span>
                   <span class="image-dot"></span>
@@ -48,7 +48,7 @@
               </div>
           </div>
           <div class="image-slide">
-              <img src="./assets/ULbottleOpener2.png" alt="Our main Bottle Opener Second View" class="secondary-image">
+              <img src="./assets/ULbottleOpener2.png" alt="Minimalist aluminum bottle opener with sleek industrial design - side view" class="secondary-image">
               <div class="image-dots">
                   <span class="image-dot"></span>
                   <span class="image-dot active"></span>
@@ -57,7 +57,7 @@
               </div>
           </div>
           <div class="image-slide">
-              <img src="./assets/ULbottleOpener3.png" alt="Our main Bottle Opener Third View" class="secondary-image">
+              <img src="./assets/ULbottleOpener3.png" alt="Minimalist aluminum bottle opener with sleek industrial design - back view" class="secondary-image">
               <div class="image-dots">
                   <span class="image-dot"></span>
                   <span class="image-dot"></span>
@@ -66,7 +66,7 @@
               </div>
           </div>
           <div class="image-slide">
-              <img src="./assets/ULbottleOpener4.png" alt="Our main Bottle Opener Fourth View" class="secondary-image">
+              <img src="./assets/ULbottleOpener4.png" alt="Minimalist aluminum bottle opener with sleek industrial design - top view" class="secondary-image">
               <div class="image-dots">
                   <span class="image-dot"></span>
                   <span class="image-dot"></span>
@@ -88,13 +88,15 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star-half-alt"></i>
             </div>
-            <span>(4.5/5 - 3 Reviews)</span>
+            <p class="product-rating-text" aria-label="Product rating: 4.5 out of 5 stars, based on 3 reviews">(4.5/5 - 3 Reviews)</p>
           </div>
 
           <div class="product-price">
-            <span class="current-price">$25.00</span>
-            <span class="original-price">$35.00</span>
-            <span class="discount-badge">$10 OFF</span>
+            <p class="price-info">
+              <strong class="current-price" aria-label="Current price: 25 dollars">$25.00</strong>
+              <del class="original-price" aria-label="Original price: 35 dollars">$35.00</del>
+              <strong class="discount-badge" aria-label="Savings: 10 dollars off">$10 OFF</strong>
+            </p>
           </div>
 
           <div class="product-description">
@@ -107,12 +109,12 @@
 
           <div class="add-to-cart">
             <div class="quantity-selector">
-              <button class="qty-btn">-</button>
+              <button class="qty-btn" aria-label="Decrease quantity">-</button>
               <input type="number" id="quantity" value="1" min="1" max="10" readonly>
-              <button class="qty-btn">+</button>
+              <button class="qty-btn" aria-label="Increase quantity">+</button>
             </div>
-            <a class="add-to-cart-btn" href="./cart.html">
-              <i class="fas fa-shopping-cart"></i>
+            <a class="add-to-cart-btn" href="./cart.html" aria-label="Add to cart">
+              <i class="fas fa-shopping-cart" aria-hidden="true"></i>
               Add to Cart
             </a>
           </div>
@@ -120,15 +122,15 @@
           <div class="product-features">
             <div class="feature">
               <i class="fas fa-truck"></i>
-              <span>Free Shipping</span>
+              <p class="feature-text">Free Shipping</p>
             </div>
             <div class="feature">
-              <i class="fas fa-undo"></i>
-              <span>30-Day Returns</span>
+              <i class="fas fa-undo"></i> 
+              <p class="feature-text">30-Day Returns</p>
             </div>
             <div class="feature">
               <i class="fas fa-shield-alt"></i>
-              <span>2-Year Warranty</span>
+              <p class="feature-text">2-Year Warranty</p>
             </div>
           </div>
         </div>
@@ -140,7 +142,7 @@
         <div class="product-details-left">
           <div class="details-section" id="description">
             <h2>Product Description</h2>
-            <p>Opening liquid-filled vessels with the sole intention of indulging in their contents. Channeling your inner handyman to gently tap into small tasks, unlocking the power of precision with every strike.</p>
+            <p class="details-section-p">Opening liquid-filled vessels with the sole intention of indulging in their contents. Channeling your inner handyman to gently tap into small tasks, unlocking the power of precision with every strike.</p>
           </div>
 
           <div class="details-section" id="specifications">
@@ -224,6 +226,8 @@
         <p>&copy; 2024 Your Store Name. All rights reserved.</p>
     </div>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 
