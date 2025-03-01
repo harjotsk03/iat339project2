@@ -10,16 +10,27 @@
   font-family: 'Poppins', sans-serif;
   position: relative;
   overflow: hidden;
+  background-image: url('./assets/Landing.png');
+}
+
+/* Dark overlay */
+.homePageHeroSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Adjust opacity as needed */
+  z-index: 1;
 }
 
 .homePageFirstSection {
-  /* background: var(--primary); */
   background-color: rgb(244, 244, 244);
   padding: 6rem 2rem 16rem 2rem;
-  border-top-left-radius: 4rem;
-  border-top-right-radius: 4rem;
+  border-radius: 50px 50px 0 0; /* Rounded top corners */
   font-family: 'Poppins', sans-serif;
-  
+  z-index: 3;
 }
 
 .homePageSecondSection {
@@ -54,7 +65,6 @@
   padding: 4rem 2rem;
   height: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   font-family: 'Poppins', sans-serif;
   background-image: url('./assets/rowOfTables.png');
@@ -78,10 +88,8 @@
 
 .guarantee-text-right {
   flex: 0 0 40%;
-  display: flex;
-  flex-direction: column;
   gap: 2rem;
-  align-items: flex-start;
+
 }
 
 .guarantee-text-right p {
@@ -90,24 +98,6 @@
   line-height: 1.6;
   margin: 0;
   font-weight: 300;
-}
-
-.discover-more-btn {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.75rem 1.5rem;
-  background: #000;
-  color: white;
-  text-decoration: none;
-  border-radius: 100px;
-  font-weight: 400;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-.discover-more-btn:hover {
-  background: #333;
-  transform: translateY(-2px);
 }
 
 @media (max-width: 1200px) {
@@ -129,9 +119,8 @@
   .guarantee-content {
     flex-direction: column;
     justify-content: center;
-    gap: 3rem;
     text-align: center;
-    padding: 4rem 1.5rem;
+    padding: 11rem 1.5rem;
   }
 
   .guarantee-text-left, 
@@ -163,16 +152,9 @@
   .guarantee-text-right p {
     font-size: 1rem;
   }
-
-  .discover-more-btn {
-    padding: 0.75rem 1.25rem;
-    font-size: 0.95rem;
-  }
 }
 
 .hero-content {
-  max-width: 900px;
-  margin-bottom: 6rem;
   position: relative;
   z-index: 2;
 }
@@ -180,7 +162,8 @@
 .hero-content h1 {
   font-size: 4.5rem;
   margin-bottom: 1.5rem;
-  color: #000;
+  margin-top: 11rem;
+  color: #ffff;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -188,7 +171,7 @@
 
 .hero-content p {
   font-size: 1.25rem;
-  color: #666;
+  color: #ffff;
   margin-bottom: 3rem;
   line-height: 1.6;
   font-weight: 300;
@@ -216,45 +199,6 @@
   background-color: #333;
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.product-showcase {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  width: 100%;
-  max-width: 1400px;
-  position: relative;
-  padding: 2rem;
-}
-
-.showcase-wrapper {
-  position: relative;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: float 6s ease-in-out infinite;
-}
-
-/* Stagger the floating animation for each item */
-.showcase-wrapper:nth-child(2) {
-  animation-delay: 1.5s;
-}
-.showcase-wrapper:nth-child(3) {
-  animation-delay: 3s;
-}
-.showcase-wrapper:nth-child(4) {
-  animation-delay: 4.5s;
-}
-
-.showcase-item {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  max-height: 100%;
-  transition: transform 0.3s ease;
-  /* filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.15)); */
 }
 
 /* Floating animation */
@@ -346,14 +290,6 @@
     font-size: 2rem;
   }
   
-  .product-showcase {
-    grid-template-columns: 1fr;
-  }
-  
-  .showcase-wrapper {
-    height: 200px;
-  }
-  
   .discover-button {
     padding: 0.875rem 2rem;
     font-size: 1rem;
@@ -409,20 +345,6 @@
   transition: transform 0.3s ease;
 }
 
-.discover-more {
-  position: absolute;
-  bottom: 2rem;
-  left: 2rem;
-  background: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 100px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
 
 .discover-more:hover {
   transform: translateY(-2px);
@@ -448,11 +370,6 @@
   border-radius: 24px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
 .feature-icon {
@@ -492,7 +409,7 @@
 
 @media (max-width: 768px) {
   .homePageFirstSection {
-    padding: 4rem 1.5rem;
+    padding: 12rem 1.5rem;
   }
   
   .section-header h2 {
