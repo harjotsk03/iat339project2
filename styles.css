@@ -23,6 +23,7 @@ html {
     box-sizing: border-box;
     border-top-right-radius: 4rem;
     border-top-left-radius: 4rem;
+    z-index: 999;
 }
 
 .footer-content {
