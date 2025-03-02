@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body id="top">
-    <nav class="topnav" id="myTopnav">
+    <nav class="topnav" id="myTopnav" aria-label="Main navigation">
         <a href="./index.html" class="logo">Unboxed Living</a>
         
         <div class="nav-links">
@@ -20,7 +20,7 @@
           <a href="./cart.html">Cart (<span id="cart-count">0</span>)</a>
         </div>
       
-        <button class="icon" onclick="myFunction()">
+        <button class="icon" onclick="myFunction()" aria-label="Toggle navigation menu" aria-expanded="false">
           <i class="fas fa-bars"></i>
         </button>
       </nav>
@@ -29,7 +29,7 @@
         <section class="products-hero">
             <h1>Our Products</h1>
             <p>Discover our collection of modern furniture; use the navigation below to find what you're looking for quickly.</p>
-            <nav class="category-nav">
+            <nav class="category-nav" aria-label="Product categories">
                 <a href="#tables" class="category-link">Tables</a>
                 <a href="#seating" class="category-link">Seating</a>
                 <a href="#shelving" class="category-link">Shelving</a>
@@ -42,10 +42,10 @@
             <p class="product-category-description">These are all the tables we have in our collection.</p>
             <div class="products-grid">
                 <div class="product-card">
-                    <a href="product.html" class="product-link">
+                    <a href="product.html" class="product-link" aria-label="View Coffee Table - $100.00 CAD">
                         <div class="product-image-container">
-                            <img src="./assets/ULcoffeeTable1.png" alt="Our main Coffee Table" class="primary-image">
-                            <img src="./assets/ULcoffeeTable2.png" alt="Our main Coffee Table Alternate View" class="secondary-image">
+                            <img src="./assets/ULcoffeeTable1.png" alt="Coffee Table front view" class="primary-image">
+                            <img src="./assets/ULcoffeeTable2.png" alt="Coffee Table side view" class="secondary-image">
                         </div>
                         <div class="product-info">
                             <div class="product-name">
@@ -54,7 +54,7 @@
                             </div>
                             <p>Low surface for the display of aesthetically pleasing objects and publications for amelioration of status.</p>
                             <div class="product-actions">
-                                <span class="view-btn">View Product</span>
+                                <span class="view-btn" aria-hidden="true">View Product</span>
                             </div>
                         </div>
                     </a>
@@ -62,8 +62,8 @@
                 <div class="product-card">
                     <a href="product.html" class="product-link">
                         <div class="product-image-container">
-                            <img src="./assets/ULLowCoffeeTable1.png" alt="Our main Low Coffee Table" class="primary-image">
-                            <img src="./assets/ULLowCoffeeTable3.png" alt="Our main Low Coffee Table Alternate View" class="secondary-image">
+                            <img src="./assets/ULlowCoffeeTable1.png" alt="Our main Low Coffee Table" class="primary-image">
+                            <img src="./assets/ULlowCoffeeTable3.png" alt="Our main Low Coffee Table Alternate View" class="secondary-image">
                         </div>
                         <div class="product-info">
                             <div class="product-name">
@@ -123,8 +123,8 @@
                 <div class="product-card">
                     <a href="product.html" class="product-link">
                         <div class="product-image-container">
-                            <img src="./assets/ULtwoSeaterSofa1.png" alt="Our main 2 Seater Sofa" class="primary-image">
-                            <img src="./assets/ULtwoSeaterSofa2.png" alt="Our main 2 Seater Sofa Alternate View" class="secondary-image">
+                            <img src="./assets/ULTwoSeaterSofa1.png" alt="Our main 2 Seater Sofa" class="primary-image">
+                            <img src="./assets/ULTwoSeaterSofa2.png" alt="Our main 2 Seater Sofa Alternate View" class="secondary-image">
                         </div>
                         <div class="product-info">
                             <div class="product-name">
