@@ -40,7 +40,6 @@
     
     <div class="homePageFirstSection">
         <div class="section-header">
-            <h5 class="pill-button">Why Choose Us?</h5>
             <h2>Elevate your living experience.</h2>
         </div>
 
@@ -86,6 +85,98 @@
         </div>
     </div>
 
+    <!-- testimonial section -->
+    <div class="homePageThirdSection">
+        <h2>Customer Reviews</h2>
+        <div class="reviews-container">
+            <div class="reviews-content">
+                <div class="reviews-left">
+                    <div class="review-card">
+                        <div class="review-text">
+                            <div class="review active" data-review-index="0">
+                                <p>"I was blown away by the sound quality and ease of use. Connecting to my devices was a breeze, and I love the touch controls. Definitely worth every penny."</p>
+                                <h4>Emma L.</h4>
+                            </div>
+                            <div class="review" data-review-index="1">
+                                <p>"These are the best earbuds I've ever owned. The battery life is incredible and the sound quality is outstanding. Highly recommended!"</p>
+                                <h4>James R.</h4>
+                            </div>
+                            <div class="review" data-review-index="2">
+                                <p>"Perfect fit, great noise cancellation, and the app integration is seamless. Worth every penny spent!"</p>
+                                <h4>Sarah M.</h4>
+                            </div>
+                        </div>
+                        <div class="navigation-buttons">
+                            <button class="nav-btn prev">←</button>
+                            <button class="nav-btn next">→</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reviews-right">
+                    <div class="product-image">
+                        <img src="assets/CustomerReviewImage.png" alt="a product image" class="review-image active" data-review-index="0">
+                        <img src="assets/CustomerReviewImage2.png" alt="a product image 2" class="review-image" data-review-index="1">
+                        <img src="assets/CustomerReviewImage3.png" alt="a product image 3" class="review-image" data-review-index="2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- script for the customer reviews -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const reviews = document.querySelectorAll('.review');
+        const images = document.querySelectorAll('.review-image');
+        const prevBtn = document.querySelector('.nav-btn.prev');
+        const nextBtn = document.querySelector('.nav-btn.next');
+        let currentIndex = 0;
+
+        // Hide all reviews and images except the first ones
+        reviews.forEach((review, index) => {
+            if (index !== 0) {
+                review.style.display = 'none';
+            }
+        });
+
+        images.forEach((image, index) => {
+            if (index !== 0) {
+                image.style.display = 'none';
+            }
+        });
+
+        function showReviewAndImage(index) {
+            // Handle reviews
+            reviews.forEach(review => review.style.display = 'none');
+            reviews[index].style.display = 'block';
+            
+            // Handle images
+            images.forEach(image => image.style.display = 'none');
+            images[index].style.display = 'block';
+            
+            // Add fade effect to both
+            reviews[index].style.opacity = 0;
+            images[index].style.opacity = 0;
+            
+            setTimeout(() => {
+                reviews[index].style.opacity = 1;
+                images[index].style.opacity = 1;
+            }, 50);
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % reviews.length;
+            showReviewAndImage(currentIndex);
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + reviews.length) % reviews.length;
+            showReviewAndImage(currentIndex);
+        });
+    });
+    </script>
+
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
@@ -110,6 +201,5 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
   </body>
 </html>
