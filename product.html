@@ -15,7 +15,7 @@
   <nav class="topnav" id="myTopnav" aria-label="Main navigation">
     <a href="./index.html" class="logo">Unboxed Living</a>
 
-    <div class="nav-links">
+    <div class="nav-links" role="menubar">
       <a href="./index.html" role="menuitem">Home</a>
       <a href="./products.html" role="menuitem">Products</a>
       <a href="./about.html" role="menuitem">About</a>
@@ -82,21 +82,25 @@
         <div class="product-info">
           <h1>Bottle Opener</h1>
           <div class="product-rating">
-            <div class="stars">
+            <div class="stars" aria-hidden="true">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="fas fa-star-half-alt"></i>
             </div>
-            <p class="product-rating-text" aria-label="Product rating: 4.5 out of 5 stars, based on 3 reviews">(4.5/5 - 3 Reviews)</p>
+            <p class="product-rating-text">(4.5/5 - 3 Reviews)</p>
+            <span class="sr-only">Product rating: 4.5 out of 5 stars, based on 3 reviews</span>
           </div>
 
           <div class="product-price">
             <p class="price-info">
-              <strong class="current-price" aria-label="Current price: 25 dollars">$25.00</strong>
-              <del class="original-price" aria-label="Original price: 35 dollars">$35.00</del>
-              <strong class="discount-badge" aria-label="Savings: 10 dollars off">$10 OFF</strong>
+              <strong class="current-price">$25.00</strong>
+              <span class="sr-only">Current price: 25 dollars</span>
+              <del class="original-price">$35.00</del>
+              <span class="sr-only">Original price: 35 dollars</span>
+              <strong class="discount-badge">$10 OFF</strong>
+              <span class="sr-only">Savings: 10 dollars off</span>
             </p>
           </div>
 
@@ -111,7 +115,15 @@
           <div class="add-to-cart">
             <div class="quantity-selector">
               <button class="qty-btn" aria-label="Decrease quantity">-</button>
-              <input type="number" id="quantity" value="1" min="1" max="10" readonly>
+              <input 
+                type="number" 
+                id="quantity" 
+                value="1" 
+                min="1" 
+                max="10" 
+                readonly
+                aria-label="Product quantity"
+              >
               <button class="qty-btn" aria-label="Increase quantity">+</button>
             </div>
             <a class="add-to-cart-btn" href="./cart.html" aria-label="Add to cart">
