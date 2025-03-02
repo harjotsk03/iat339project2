@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="footer.css">
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -15,7 +16,7 @@
   <body>
     <nav class="topnav" id="myTopnav" aria-label="Main navigation">
       <a href="./index.html" class="logo">Unboxed Living</a>
-           
+
       <div class="nav-links" role="menubar">
         <a href="./index.html" role="menuitem" class="active">Home</a>
         <a href="./products.html" role="menuitem">Products</a>
@@ -92,96 +93,27 @@
                 <div class="reviews-left">
                     <div class="review-card">
                         <div class="review-text">
-                            <div class="review active" data-review-index="0">
-                                <p>"I was blown away by the sound quality and ease of use. Connecting to my devices was a breeze, and I love the touch controls. Definitely worth every penny."</p>
-                                <h4>Emma L.</h4>
-                            </div>
-                            <div class="review" data-review-index="1">
-                                <p>"These are the best earbuds I've ever owned. The battery life is incredible and the sound quality is outstanding. Highly recommended!"</p>
-                                <h4>James R.</h4>
-                            </div>
-                            <div class="review" data-review-index="2">
-                                <p>"Perfect fit, great noise cancellation, and the app integration is seamless. Worth every penny spent!"</p>
-                                <h4>Sarah M.</h4>
-                            </div>
-                        </div>
-                        <div class="navigation-buttons">
-                            <button class="nav-btn prev">←</button>
-                            <button class="nav-btn next">→</button>
+                            <p>"The craftsmanship is exceptional. Every piece feels like it's built to last generations, and the attention to detail in the woodwork is remarkable. It's exactly the timeless quality I was looking for."</p>
+                            <h4>Emma L.</h4>
                         </div>
                     </div>
                 </div>
                 
                 <div class="reviews-right">
                     <div class="product-image">
-                        <img src="assets/CustomerReviewImage.png" alt="a product image" class="review-image active" data-review-index="0">
-                        <img src="assets/CustomerReviewImage2.png" alt="a product image 2" class="review-image" data-review-index="1">
-                        <img src="assets/CustomerReviewImage3.png" alt="a product image 3" class="review-image" data-review-index="2">
+                        <img src="assets/CustomerReviewImage.png" alt="a product image">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- script for the customer reviews -->
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const reviews = document.querySelectorAll('.review');
-        const images = document.querySelectorAll('.review-image');
-        const prevBtn = document.querySelector('.nav-btn.prev');
-        const nextBtn = document.querySelector('.nav-btn.next');
-        let currentIndex = 0;
-
-        // Hide all reviews and images except the first ones
-        reviews.forEach((review, index) => {
-            if (index !== 0) {
-                review.style.display = 'none';
-            }
-        });
-
-        images.forEach((image, index) => {
-            if (index !== 0) {
-                image.style.display = 'none';
-            }
-        });
-
-        function showReviewAndImage(index) {
-            // Handle reviews
-            reviews.forEach(review => review.style.display = 'none');
-            reviews[index].style.display = 'block';
-            
-            // Handle images
-            images.forEach(image => image.style.display = 'none');
-            images[index].style.display = 'block';
-            
-            // Add fade effect to both
-            reviews[index].style.opacity = 0;
-            images[index].style.opacity = 0;
-            
-            setTimeout(() => {
-                reviews[index].style.opacity = 1;
-                images[index].style.opacity = 1;
-            }, 50);
-        }
-
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % reviews.length;
-            showReviewAndImage(currentIndex);
-        });
-
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + reviews.length) % reviews.length;
-            showReviewAndImage(currentIndex);
-        });
-    });
-    </script>
-
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Contact Us</h3>
-                <p>Email: info@yourstore.com</p>
-                <p>Phone: (555) 123-4567</p>
+                <p>Email: info@unboxedliving.com</p>
+                <p>Phone: (604) 123-4567</p>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
@@ -191,14 +123,17 @@
             </div>
             <div class="footer-section">
                 <h3>Location</h3>
-                <p>123 Store Street</p>
-                <p>City, State 12345</p>
+                <p>742 West Hastings Street</p>
+                <p>Vancouver, BC V6C 1A1</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Unboxed Living. All rights reserved.</p>
+            <p>&copy; 2024 Unboxed Living. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
+
 
   </body>
 </html>
