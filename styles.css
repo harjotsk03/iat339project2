@@ -27,7 +27,7 @@ html {
 }
 
 .footer-content {
-    max-width: 80rem;
+    max-width: 90rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -85,11 +85,54 @@ html {
     transform: scaleX(1);
 }
 
+.email-signup {
+    margin-top: 1.5rem;
+    width: 80%;
+}
+
 .email-input-wrapper {
     display: flex;
     gap: 0.5rem;
-    width: 100%;
-    box-sizing: border-box;
+    margin-top: 0.5rem;
+}
+
+.email-input-wrapper input {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    background: var(--bg-light);
+}
+
+.email-input-wrapper input:focus {
+    outline: 0.125rem solid var(--alternate);
+    outline-offset: 0.125rem;
+}
+
+.subscribe-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    background: var(--secondary);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background: var(--alternate);
+    color: var(--primary);
+}
+
+.subscribe-btn:focus-visible {
+    outline: 0.125rem solid var(--alternate);
+    outline-offset: 0.125rem;
+    background: var(--alternate);
+    color: var(--primary);
 }
 
 .footer-bottom {
@@ -145,7 +188,7 @@ html {
         flex-direction: column;
     }
     
-    .footer-section button[type="submit"] {
+    .subscribe-btn {
         width: 100%;
     }
 }
@@ -180,6 +223,10 @@ html {
         right: 1rem;
         width: 2.5rem;
         height: 2.5rem;
+    }
+
+    .email-signup {
+        width: 100%;
     }
 }
 
