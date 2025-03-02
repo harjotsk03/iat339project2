@@ -493,3 +493,19 @@
         margin-top: 3rem;
     }
 }
+
+/* Change button color on card hover/focus */
+.product-card:hover .view-btn,
+.product-card:focus-within .view-btn {
+    background-color: var(--secondary);
+    color: white;
+    border: 0.125rem solid var(--secondary);
+}
+
+/* Ensure the hover state persists when button itself is hovered */
+.product-card:hover .view-btn:hover,
+.product-card:focus-within .view-btn:focus {
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: 0.125rem solid var(--primary);
+}
