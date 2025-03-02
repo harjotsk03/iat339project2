@@ -27,7 +27,7 @@ html {
 }
 
 .footer-content {
-    max-width: 1200px;
+    max-width: 80rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -39,7 +39,7 @@ html {
 
 .footer-section {
     flex: 1;
-    min-width: 250px;
+    min-width: 12.5rem;
     box-sizing: border-box;
 }
 
@@ -73,8 +73,8 @@ html {
     content: '';
     position: absolute;
     width: 100%;
-    height: 2px;
-    bottom: -2px;
+    height: 0.125rem;
+    bottom: -0.125rem;
     left: 0;
     background-color: var(--alternate);
     transform: scaleX(0);
@@ -96,7 +96,7 @@ html {
     text-align: center;
     margin-top: 2rem;
     padding: 1rem 2rem 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 0.125rem solid rgba(255, 255, 255, 0.1);
     box-sizing: border-box;
     color: #7a8f89;
     font-size: 0.8rem;
@@ -124,7 +124,7 @@ html {
 
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
     .footer {
         border-top-right-radius: 2rem;
         border-top-left-radius: 2rem;
@@ -171,14 +171,44 @@ html {
 .scroll-top:hover {
     opacity: 1;
     background: var(--secondary);
-    transform: translateY(-3px);
+    transform: translateY(-0.125rem);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48rem) {
     .scroll-top {
         bottom: 1rem;
         right: 1rem;
         width: 2.5rem;
         height: 2.5rem;
     }
+}
+
+/* Footer link focus states */
+.footer-section a:focus-visible {
+    outline: 0.125rem solid var(--primary);
+    outline-offset: 0.125rem;
+    box-shadow: 0 0 0 0.125rem rgba(35, 71, 60, 0.2);
+    background-color: var(--alternate);
+    color: var(--primary);
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+}
+
+/* Footer social media icon focus states */
+.social-icons a:focus-visible {
+    outline: 0.125rem solid var(--primary);
+    outline-offset: 0.125rem;
+    box-shadow: 0 0 0 0.125rem rgba(35, 71, 60, 0.2);
+    background-color: var(--alternate);
+    color: var(--primary);
+    border-radius: 50%;
+}
+
+/* Footer button focus states */
+.footer-button:focus-visible {
+    outline: 0.125rem solid var(--primary);
+    outline-offset: 0.125rem;
+    box-shadow: 0 0 0 0.125rem rgba(35, 71, 60, 0.2);
+    background-color: var(--alternate);
+    color: var(--primary);
 }

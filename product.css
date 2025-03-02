@@ -162,9 +162,9 @@
 
 /* Focus states for quantity buttons */
 .qty-btn:focus {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
-  box-shadow: 0 0 0 2px rgba(35, 71, 60, 0.2);
+  outline: 0.125rem solid var(--primary);
+  outline-offset: 0.125rem;
+  box-shadow: 0 0 0 0.125rem rgba(35, 71, 60, 0.2);
   background-color: var(--secondary);
   color: var(--bg-light);
 }
@@ -182,9 +182,9 @@
 
 /* Focus state for quantity input */
 .quantity-selector input[type="number"]:focus {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
-  box-shadow: 0 0 0 2px rgba(35, 71, 60, 0.2);
+  outline: 0.125rem solid var(--primary);
+  outline-offset: 0.125rem;
+  box-shadow: 0 0 0 0.125rem rgba(35, 71, 60, 0.2);
   background-color: var(--alternate);
   color: var(--text-color);
 }
@@ -290,9 +290,9 @@
 
 /* Focus state for add to cart button */
 .add-to-cart-btn:focus {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
-  box-shadow: 0 0 0 2px rgba(35, 71, 60, 0.2);
+  outline: 0.125rem solid var(--primary);
+  outline-offset: 0.125rem;
+  box-shadow: 0 0 0 0.125rem rgba(35, 71, 60, 0.2);
   background-color: var(--secondary);
   color: var(--bg-light);
 }
@@ -407,9 +407,9 @@
 
 /* Focus state for tab buttons */
 .tab-btn:focus {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
-  box-shadow: 0 0 0 2px rgba(35, 71, 60, 0.2);
+  outline: 0.125rem solid var(--primary);
+  outline-offset: 0.125rem;
+  box-shadow: 0 0 0 0.125rem rgba(35, 71, 60, 0.2);
   background-color: var(--alternate);
   color: var(--primary);
 }
@@ -731,9 +731,9 @@
 
 /* Focus state for thumbnail images that are clickable */
 .thumbnail:focus {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
-  box-shadow: 0 0 0 2px rgba(35, 71, 60, 0.2);
+  outline: 0.125rem solid var(--primary);
+  outline-offset: 0.125rem;
+  box-shadow: 0 0 0 0.125rem rgba(35, 71, 60, 0.2);
 }
 
 /* Ensure focus states remain visible when using mouse */
@@ -742,7 +742,7 @@
 }
 
 *:focus-visible {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
-  box-shadow: 0 0 0 2px rgba(35, 71, 60, 0.2);
+  outline: 0.125rem solid var(--primary);
+  outline-offset: 0.125rem;
+  box-shadow: 0 0 0 0.125rem rgba(35, 71, 60, 0.2);
 }

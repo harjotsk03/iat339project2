@@ -125,7 +125,7 @@
 .view-btn, .cart-btn {
     padding: 0.65rem 1.25rem;
     border: none;
-    border-radius: 6px;
+    border-radius: 0.5rem;
     font-family: "Poppins", sans-serif;
     font-size: 0.75rem;
     font-weight: 500;
@@ -203,7 +203,7 @@
     }
 
     .products-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(17.25rem, 1fr));
         gap: 1.5rem;
         margin-top: 0;
     }
@@ -271,8 +271,8 @@
 
 .filter-btn {
     padding: 0.5rem 1rem;
-    border: 1px solid #ddd;
-    border-radius: 6px;
+    border: 0.125rem solid #ddd;
+    border-radius: 0.5rem;
     background: white;
     font-family: inherit;
     cursor: pointer;
@@ -298,7 +298,7 @@
 
 /* Add subtle animation to dropdown */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
+    from { opacity: 0; transform: translateY(-0.5rem); }
     to { opacity: 1; transform: translateY(0); }
 }
 
@@ -308,11 +308,11 @@
 
 .sort-options select {
     padding: 0.5rem 1rem;
-    border: 1px solid #ddd;
-    border-radius: 6px;
+    border: 0.125rem solid #ddd;
+    border-radius: 0.5rem;
     font-family: inherit;
     cursor: pointer;
-    min-width: 200px;
+    min-width: 10rem;
 }
 
 .newsletter {
@@ -320,7 +320,7 @@
     text-align: center;
     padding: 4rem 2rem;
     background: white;
-    border-radius: 12px;
+    border-radius: 1rem;
 }
 
 .newsletter h2 {
@@ -354,7 +354,7 @@
     background: var(--primary);
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 0.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -419,8 +419,8 @@
     cursor: pointer;
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
-    border: 1px solid var(--primary);
-    border-radius: 20px;
+    border: 0.125rem solid var(--primary);
+    border-radius: 0.5rem;
     transition: all 0.3s ease;
 }
 
