@@ -32,7 +32,7 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
   color: white;
-  padding: 0.5rem 0;
+  padding: 0.5rem 1rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -79,7 +79,28 @@ body {
   min-height: 2rem;
 }
 
-@media screen and (max-width: 768px) {
+.topnav a:focus-visible {
+  background-color: var(--secondary);
+  color: white;
+  outline: 0.125rem solid var(--primary);
+  outline-offset: 0.125rem;
+}
+
+.topnav .icon:focus-visible {
+  background-color: var(--secondary);
+  color: white;
+  outline: 0.125rem solid var(--primary);
+  outline-offset: 0.125rem;
+  box-shadow: 0 0 0 0.125rem rgba(35, 71, 60, 0.2);
+}
+
+/* Update active state to maintain contrast when focused */
+.topnav a.active:focus-visible {
+  background-color: var(--alternate);
+  color: var(--primary);
+}
+
+@media screen and (max-width: 48rem) {
   .topnav {
     padding: 0.5rem 1rem;
   }
@@ -129,7 +150,7 @@ body {
 @keyframes slideDown {
   from {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-1rem);
   }
   to {
     opacity: 1;
@@ -138,5 +159,5 @@ body {
 }
 
 .topnav.responsive .nav-links {
-  animation: slideDown 0.3s ease forwards;
+  animation: slideDown 0.8s ease forwards;
 }
