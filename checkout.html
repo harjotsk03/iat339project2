@@ -116,6 +116,13 @@
                 <h3>Contact Us</h3>
                 <p>Email: info@unboxedliving.com</p>
                 <p>Phone: (604) 123-4567</p>
+                <div class="email-signup">
+                    <h3>Email Us</h3>
+                    <div class="email-input-wrapper">
+                        <input type="email" placeholder="Email address" aria-label="Email address we can contact you at">
+                        <button class="subscribe-btn" aria-label="Send us an email">Send</button>
+                    </div>
+                </div>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
@@ -137,11 +144,6 @@
     <script>
         function showSuccess(e) {
             e.preventDefault();
-            // Clear the cart
-            localStorage.setItem('cart', JSON.stringify([]));
-            // Update cart count in nav
-            document.getElementById('cart-count').textContent = '0';
-            // Show success message
             document.getElementById('success-message').classList.add('show');
         }
     </script>
