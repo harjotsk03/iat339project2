@@ -10,29 +10,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav class="topnav" id="myTopnav">
+    <nav class="topnav" id="myTopnav" aria-label="Main navigation">
         <a href="./index.html" class="logo">Unboxed Living</a>
         
-        <div class="nav-links">
+        <div class="nav-links" role="menubar">
             <a href="./index.html">Home</a>
             <a href="./products.html">Products</a>
             <a href="./about.html">About</a>
-            <a href="./cart.html" class="active">Cart (<span id="cart-count">0</span>)</a>
+            <a href="./cart.html" class="active">Cart (<span id="cart-count" aria-live="polite">0</span>)</a>
         </div>
       
-        <button class="icon" onclick="myFunction()">
-            <i class="fas fa-bars"></i>
+        <button class="icon" onclick="myFunction()" aria-label="Toggle navigation menu" aria-expanded="false">
+            <i class="fas fa-bars" aria-hidden="true"></i>
         </button>
     </nav>
 
     <main class="cart-container">
         <div class="nav-bar">
             <a href="./index.html">Home</a>
-            <p>></p>
+            <p>&gt;</p>
             <a href="./products.html">Products</a>
-            <p>></p>
+            <p>&gt;</p>
             <a href="./product.html">Bottle Opener</a>
-            <p>></p>
+            <p>&gt;</p>
             <a class="active" href="./cart.html">Cart</a>
           </div>
         <section class="cart-hero">
@@ -51,9 +51,17 @@
                         <p class="cart-item-price">$50.00</p>
                         <div class="cart-item-actions">
                             <div class="quantity-controls">
-                                <button class="qty-btn">-</button>
-                                <input type="number" id="quantity" value="1" min="1" max="10" readonly>
-                                <button class="qty-btn">+</button>
+                                <button class="quantity-btn minus" aria-label="Decrease quantity">-</button>
+                                <input 
+                                    type="number" 
+                                    id="quantity-item1" 
+                                    value="1" 
+                                    min="1" 
+                                    max="10" 
+                                    readonly 
+                                    aria-label="Product quantity"
+                                >
+                                <button class="quantity-btn plus" aria-label="Increase quantity">+</button>
                             </div>
                             <button class="remove-btn">
                             <i class="fas fa-trash"></i>
@@ -71,9 +79,17 @@
                         <p class="cart-item-price">$100.00</p>
                         <div class="cart-item-actions">
                             <div class="quantity-controls">
-                                <button class="qty-btn">-</button>
-                                <input type="number" id="quantity" value="2" min="1" max="10" readonly>
-                                <button class="qty-btn">+</button>
+                                <button class="quantity-btn minus" aria-label="Decrease quantity">-</button>
+                                <input 
+                                    type="number" 
+                                    id="quantity-item2" 
+                                    value="2" 
+                                    min="1" 
+                                    max="10" 
+                                    readonly 
+                                    aria-label="Product quantity"
+                                >
+                                <button class="quantity-btn plus" aria-label="Increase quantity">+</button>
                             </div>
                             <button class="remove-btn">
                             <i class="fas fa-trash"></i>
