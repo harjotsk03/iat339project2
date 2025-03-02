@@ -199,13 +199,13 @@
   display: flex;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    &::-webkit-scrollbar {
-        display: none;
-    }
-    /* Hide scrollbar for IE, Edge and Firefox */
-    -ms-overflow-style: none;  
-    scrollbar-width: none;
+  -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.product-image-container::-webkit-scrollbar {
+  display: none;
 }
 
 .image-slide {
@@ -242,27 +242,6 @@
 
 .image-dot.active {
   background: white;
-}
-
-
-/* Add scroll indicator */
-.product-image-container::after {
-  content: 'Swipe →';
-  position: absolute;
-  right: 1rem;
-  bottom: 1rem;
-  background: rgba(0, 0, 0, 0.3);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 2rem;
-  font-size: 0.8rem;
-  pointer-events: none;
-  animation: fadeInOut 2s infinite;
-}
-
-@keyframes fadeInOut {
-  0%, 100% { opacity: 0; }
-  50% { opacity: 1; }
 }
 
 .add-to-cart-btn {
@@ -745,4 +724,24 @@
   outline: 0.125rem solid var(--primary);
   outline-offset: 0.125rem;
   box-shadow: 0 0 0 0.125rem rgba(35, 71, 60, 0.2);
+}
+
+.swipe-indicator {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  pointer-events: none;
+  animation: fadeInOut 2s infinite;
+}
+
+@media screen and (max-width: 37.5rem) {
+  .swipe-indicator {
+    padding: 0.25rem 0.65rem;
+    font-size: 0.5rem;
+  }
 }
