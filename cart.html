@@ -11,13 +11,13 @@
 </head>
 <body>
     <nav class="topnav" id="myTopnav" aria-label="Main navigation">
-        <a href="./index.html" class="logo">Unboxed Living</a>
+        <a href="./index.html" class="logo" aria-label="Unboxed Living Logo and Button to Home Page">Unboxed Living</a>
         
         <div class="nav-links" role="menubar">
-            <a href="./index.html" role="menuitem">Home</a>
-            <a href="./products.html" role="menuitem">Products</a>
-            <a href="./about.html" role="menuitem">About</a>
-            <a href="./cart.html" role="menuitem" class="active">Cart (<span id="cart-count" aria-live="polite">0</span>)</a>
+            <a href="./index.html" role="menuitem" aria-label="Home Page Button">Home</a>
+            <a href="./products.html" role="menuitem" aria-label="Products Page Button">Products</a>
+            <a href="./about.html" role="menuitem" aria-label="About Page Button">About</a>
+            <a href="./cart.html" role="menuitem" class="active" aria-label="Cart Page Button">Cart (<span id="cart-count" aria-live="polite">0</span>)</a>
         </div>
       
         <button class="icon" onclick="myFunction()" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -27,13 +27,13 @@
 
     <main class="cart-container">
         <div class="nav-bar">
-            <a href="./index.html">Home</a>
+            <a href="./index.html" aria-label="Home Page Button">Home</a>
             <p>&gt;</p>
-            <a href="./products.html">Products</a>
+            <a href="./products.html" aria-label="Products Page Button">Products</a>
             <p>&gt;</p>
-            <a href="./product.html">Bottle Opener</a>
+            <a href="./product.html" aria-label="Product Page Button">Bottle Opener</a>
             <p>&gt;</p>
-            <a class="active" href="./cart.html">Cart</a>
+            <a class="active" href="./cart.html" aria-label="Cart Page Button">Cart</a>
           </div>
         <section class="cart-hero">
             <h1>Your Cart</h1>
@@ -54,12 +54,12 @@
                                 <button class="qty-btn minus" aria-label="Decrease quantity">-</button>
                                 <input 
                                     type="number" 
-                                    id="quantity" 
+                                    id="quantityBottleOpener" 
                                     value="1" 
                                     min="1" 
                                     max="10" 
                                     readonly 
-                                    aria-label="Product quantity"
+                                    aria-label="Product quantity for Bottle Opener"
                                 >
                                 <button class="qty-btn plus" aria-label="Increase quantity">+</button>
                             </div>
@@ -82,12 +82,12 @@
                                 <button class="qty-btn minus" aria-label="Decrease quantity">-</button>
                                 <input 
                                     type="number" 
-                                    id="quantity" 
+                                    id="quantityCoffeeTable" 
                                     value="2" 
                                     min="1" 
                                     max="10" 
                                     readonly 
-                                    aria-label="Product quantity"
+                                    aria-label="Product quantity for Coffee Table"
                                 >
                                 <button class="qty-btn plus" aria-label="Increase quantity">+</button>
                             </div>

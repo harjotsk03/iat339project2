@@ -9,15 +9,15 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body id="top">
     <nav class="topnav" id="myTopnav" aria-label="Main navigation">
-        <a href="./index.html" class="logo">Unboxed Living</a>
+        <a href="./index.html" class="logo" aria-label="Unboxed Living Logo and Button to Home Page">Unboxed Living</a>
     
         <div class="nav-links" role="menubar">
-          <a href="./index.html" role="menuitem" class="active">Home</a>
-          <a href="./products.html" role="menuitem">Products</a>
-          <a href="./about.html" role="menuitem">About</a>
-          <a href="./cart.html" role="menuitem">Cart (<span id="cart-count" aria-live="polite">0</span>)</a>
+          <a href="./index.html" role="menuitem" class="active" aria-label="Home Page Button">Home</a>
+          <a href="./products.html" role="menuitem" aria-label="Products Page Button">Products</a>
+          <a href="./about.html" role="menuitem" aria-label="About Page Button">About</a>
+          <a href="./cart.html" role="menuitem" aria-label="Cart Page Button">Cart (<span id="cart-count" aria-live="polite">0</span>)</a>
         </div>
     
         <button class="icon" onclick="myFunction()" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -68,7 +68,7 @@
                         <h2>What Our Customers Say</h2>
                         <div class="review-card">
                             <p>"The craftsmanship is exceptional. Every piece feels like it's built to last generations, and the attention to detail in the woodwork is remarkable. It's exactly the timeless quality I was looking for."</p>
-                            <h4>Emma L.</h4>
+                            <p class="reviewer-name">Emma L.</p>
                         </div>
                     </div>
                     <div class="review-right">
