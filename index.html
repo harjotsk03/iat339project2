@@ -1,112 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unboxed Living | Home</title>
     <link rel="stylesheet" href="nav.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="footer.css">
-
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Unboxed Living</title>
-  </head>
-  <body>
+</head>
+<body>
     <nav class="topnav" id="myTopnav" aria-label="Main navigation">
-      <a href="./index.html" class="logo">Unboxed Living</a>
-
-      <div class="nav-links" role="menubar">
-        <a href="./index.html" role="menuitem" class="active">Home</a>
-        <a href="./products.html" role="menuitem">Products</a>
-        <a href="./about.html" role="menuitem">About</a>
-        <a href="./cart.html" role="menuitem">Cart (<span id="cart-count" aria-live="polite">0</span>)</a>
-      </div>
+        <a href="./index.html" class="logo">Unboxed Living</a>
     
-      <button class="icon" onclick="myFunction()" aria-label="Toggle navigation menu" aria-expanded="false">
-        <i class="fas fa-bars" aria-hidden="true"></i>
-      </button>
+        <div class="nav-links" role="menubar">
+          <a href="./index.html" role="menuitem" class="active">Home</a>
+          <a href="./products.html" role="menuitem">Products</a>
+          <a href="./about.html" role="menuitem">About</a>
+          <a href="./cart.html" role="menuitem">Cart (<span id="cart-count" aria-live="polite">0</span>)</a>
+        </div>
+    
+        <button class="icon" onclick="myFunction()" aria-label="Toggle navigation menu" aria-expanded="false">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
     </nav>
-   
-    <div class="homePageHeroSection">
-      <div class="hero-content">
-          <h1>Minimalist Living Essentials</h1>
-          <p>Transform your space with our curated collection of sustainable, eco-friendly products. Every item is thoughtfully designed for modern, unboxed living.</p>
-          <a href="./products.html" class="discover-button">Shop Now</a>
-      </div>
-    </div>
-    
-    <div class="homePageFirstSection">
-        <div class="section-header">
-            <h2>Elevate your living experience.</h2>
-        </div>
 
+    <main class="home-container">
+        <section class="home-hero">
+            <h1>Minimalist Living Essentials</h1>
+            <p>Transform your space with our curated collection of sustainable, eco-friendly products. Every item is thoughtfully designed for modern, unboxed living.</p>
+            <a href="./products.html" class="discover-button">Shop Now</a>
+        </section>
 
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-couch"></i>
+        <section class="home-content">
+            <div class="values-section">
+                <h2>Elevate your living experience.</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <i class="fas fa-couch"></i>
+                        <h3>Premium Comfort Design</h3>
+                        <p>Experience unparalleled comfort with our ergonomically designed furniture, featuring premium materials and expert craftsmanship.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-tools"></i>
+                        <h3>Built to Last</h3>
+                        <p>Crafted with durability in mind, our furniture combines robust construction with timeless design for years of reliable use.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-palette"></i>
+                        <h3>Customizable Style</h3>
+                        <p>Choose from a wide range of fabrics and finishes to perfectly match your home's aesthetic and personal style preferences.</p>
+                    </div>
                 </div>
-                <h4>Premium Comfort Design</h4>
-                <p>Experience unparalleled comfort with our ergonomically designed furniture, featuring premium materials and expert craftsmanship.</p>
             </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-tools"></i>
+            <div class="home-grid">
+                <div class="home-text">
+                    <h2>30-Day<br>Money-Back<br>Guarantee</h2>
                 </div>
-                <h4>Built to Last</h4>
-                <p>Crafted with durability in mind, our furniture combines robust construction with timeless design for years of reliable use.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-palette"></i>
+                <div class="home-text">
+                    <p>Your satisfaction is our top priority. We offer a 30-day money-back guarantee and a one-year warranty on all our furniture. Our dedicated customer support team is here to assist you with any questions or concerns.</p>
                 </div>
-                <h4>Customizable Style</h4>
-                <p>Choose from a wide range of fabrics and finishes to perfectly match your home's aesthetic and personal style preferences.</p>
             </div>
-        </div>
-        
-      </div>
-
-    </div>
-    
-    <div class="homePageSecondSection">
-        <div class="guarantee-content">
-            <div class="guarantee-text-left">
-                <h2>30-Day<br>Money-Back<br>Guarantee</h2>
-            </div>
-            <div class="guarantee-text-right">
-                <p>Your satisfaction is our top priority. We offer a 30-day money-back guarantee and a one-year warranty on all our furniture. Our dedicated customer support team is here to assist you with any questions or concerns.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- testimonial section -->
-    <div class="homePageThirdSection">
-        <h2>Customer Reviews</h2>
-        <div class="reviews-container">
-            <div class="reviews-content">
-                <div class="reviews-left">
-                    <div class="review-card">
-                        <div class="review-text">
+            
+            <div class="reviews-section">
+                <div class="reviews-content">
+                    <div class="review-left">
+                        <h2>What Our Customers Say</h2>
+                        <div class="review-card">
                             <p>"The craftsmanship is exceptional. Every piece feels like it's built to last generations, and the attention to detail in the woodwork is remarkable. It's exactly the timeless quality I was looking for."</p>
                             <h4>Emma L.</h4>
                         </div>
                     </div>
-                </div>
-                
-                <div class="reviews-right">
-                    <div class="product-image">
-                        <img src="assets/CustomerReviewImage.png" alt="a product image">
+                    <div class="review-right">
+                        <img src="./assets/CustomerReviewImage.png" alt="Customer reviewed furniture piece">
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
- 
+        </section>
+    </main>
+
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
@@ -143,7 +115,6 @@
     </a>
 
     <script src="script.js"></script>
-
-
-  </body>
-</html>
+    
+</body>
+</html> 
