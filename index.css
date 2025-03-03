@@ -28,6 +28,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     padding: 4rem 2rem 11rem 2rem;
     margin-bottom: -4rem;
 }
@@ -84,6 +85,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .home-grid::before {
@@ -369,5 +371,11 @@
 
     .review-card p {
         font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 48rem) {
+    .home-hero, .home-grid {
+        background-attachment: scroll; /* Disable fixed background on mobile */
     }
 } 
