@@ -169,6 +169,7 @@
 @media screen and (max-width: 48rem) {
     .checkout-container {
         padding: 4rem 1rem;
+        text-align: center;
     }
 
     .form-grid {

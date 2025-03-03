@@ -196,6 +196,7 @@
 @media screen and (max-width: 30rem) {
     .products-container {
         padding: 3rem 1.5rem 2rem 1.5rem;
+        text-align: center;
     }
 
     .category-filters {
@@ -220,7 +221,7 @@
     .products-hero {
         margin-bottom: 1rem;
         margin-top: 0;
-        text-align: left;
+        text-align: center;
     }
     
     .products-hero h1 {
@@ -235,7 +236,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .product-actions {
@@ -478,6 +479,7 @@
     .category-nav {
         flex-wrap: wrap;
         gap: 0.5rem;
+        justify-content: center;
     }
 
     .product-category {

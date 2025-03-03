@@ -241,6 +241,7 @@
 @media screen and (max-width: 48rem) {
     .cart-hero {
         margin-bottom: 1rem;
+        text-align: center;
     }
 
     .cart-container {
