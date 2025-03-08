@@ -24,7 +24,7 @@
     align-items: center;
     color: var(--bg-light);
     text-align: center;
-    background-image: url('./assets/Landing.png');
+    background-image: url('../../assets/Landing.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -81,7 +81,7 @@
     z-index: 2;
     margin-bottom: -4rem;
     padding: 6rem 13rem 10rem 13rem;
-    background-image: url('./assets/rowOfTables.png');
+    background-image: url('../../assets/rowOfTables.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
